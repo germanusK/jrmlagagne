@@ -649,14 +649,13 @@
                     <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
                     <h4>Project name or Service type</h4>
                     <span>Address</span>
-                    <div class="social">
+                    <div class="social line-clamp-4">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
                     </div>
                   </div>
                 </div>
               </div>
             </div><!-- End testimonial item -->
-
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item team">
@@ -664,14 +663,13 @@
                     <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
                     <h4>Project name or Service type</h4>
                     <span>Address</span>
-                    <div class="social">
+                    <div class="social line-clamp-4">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
                     </div>
                   </div>
                 </div>
               </div>
             </div><!-- End testimonial item -->
-
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item team">
@@ -679,14 +677,13 @@
                     <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
                     <h4>Project name or Service type</h4>
                     <span>Address</span>
-                    <div class="social">
+                    <div class="social line-clamp-4">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
                     </div>
                   </div>
                 </div>
               </div>
             </div><!-- End testimonial item -->
-
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item team">
@@ -694,14 +691,13 @@
                     <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
                     <h4>Project name or Service type</h4>
                     <span>Address</span>
-                    <div class="social">
+                    <div class="social line-clamp-4">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
                     </div>
                   </div>
                 </div>
               </div>
             </div><!-- End testimonial item -->
-
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item team">
@@ -709,14 +705,13 @@
                     <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
                     <h4>Project name or Service type</h4>
                     <span>Address</span>
-                    <div class="social">
+                    <div class="social line-clamp-4">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
                     </div>
                   </div>
                 </div>
               </div>
             </div><!-- End testimonial item -->
-
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item team">
@@ -724,14 +719,13 @@
                     <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
                     <h4>Project name or Service type</h4>
                     <span>Address</span>
-                    <div class="social">
+                    <div class="social line-clamp-4">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
                     </div>
                   </div>
                 </div>
               </div>
             </div><!-- End testimonial item -->
-
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item team">
@@ -739,14 +733,13 @@
                     <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
                     <h4>Project name or Service type</h4>
                     <span>Address</span>
-                    <div class="social">
+                    <div class="social line-clamp-4">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
                     </div>
                   </div>
                 </div>
               </div>
             </div><!-- End testimonial item -->
-
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item team">
@@ -754,14 +747,13 @@
                     <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
                     <h4>Project name or Service type</h4>
                     <span>Address</span>
-                    <div class="social">
+                    <div class="social line-clamp-4">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
                     </div>
                   </div>
                 </div>
               </div>
             </div><!-- End testimonial item -->
-
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item team">
@@ -769,14 +761,13 @@
                     <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
                     <h4>Project name or Service type</h4>
                     <span>Address</span>
-                    <div class="social">
+                    <div class="social line-clamp-4">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
                     </div>
                   </div>
                 </div>
               </div>
             </div><!-- End testimonial item -->
-
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item team">
@@ -784,14 +775,13 @@
                     <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
                     <h4>Project name or Service type</h4>
                     <span>Address</span>
-                    <div class="social">
+                    <div class="social line-clamp-4">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
                     </div>
                   </div>
                 </div>
               </div>
             </div><!-- End testimonial item -->
-
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item team">
@@ -799,7 +789,175 @@
                     <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
                     <h4>Project name or Service type</h4>
                     <span>Address</span>
-                    <div class="social">
+                    <div class="social line-clamp-4">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item team">
+                  <div class="member">
+                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
+                    <h4>Project name or Service type</h4>
+                    <span>Address</span>
+                    <div class="social line-clamp-4">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item team">
+                  <div class="member">
+                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
+                    <h4>Project name or Service type</h4>
+                    <span>Address</span>
+                    <div class="social line-clamp-4">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item team">
+                  <div class="member">
+                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
+                    <h4>Project name or Service type</h4>
+                    <span>Address</span>
+                    <div class="social line-clamp-4">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item team">
+                  <div class="member">
+                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
+                    <h4>Project name or Service type</h4>
+                    <span>Address</span>
+                    <div class="social line-clamp-4">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item team">
+                  <div class="member">
+                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
+                    <h4>Project name or Service type</h4>
+                    <span>Address</span>
+                    <div class="social line-clamp-4">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item team">
+                  <div class="member">
+                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
+                    <h4>Project name or Service type</h4>
+                    <span>Address</span>
+                    <div class="social line-clamp-4">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item team">
+                  <div class="member">
+                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
+                    <h4>Project name or Service type</h4>
+                    <span>Address</span>
+                    <div class="social line-clamp-4">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item team">
+                  <div class="member">
+                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
+                    <h4>Project name or Service type</h4>
+                    <span>Address</span>
+                    <div class="social line-clamp-4">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item team">
+                  <div class="member">
+                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
+                    <h4>Project name or Service type</h4>
+                    <span>Address</span>
+                    <div class="social line-clamp-4">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item team">
+                  <div class="member">
+                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
+                    <h4>Project name or Service type</h4>
+                    <span>Address</span>
+                    <div class="social line-clamp-4">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item team">
+                  <div class="member">
+                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
+                    <h4>Project name or Service type</h4>
+                    <span>Address</span>
+                    <div class="social line-clamp-4">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item team">
+                  <div class="member">
+                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
+                    <h4>Project name or Service type</h4>
+                    <span>Address</span>
+                    <div class="social line-clamp-4">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
                     </div>
                   </div>
