@@ -843,22 +843,22 @@ section {
 # Call To Action Section
 --------------------------------------------------------------*/
 .call-to-action .container {
-  background: linear-gradient( rgba(4, 88, 245, 0.7), rgba(7, 1, 54, 0.7)), url("../img/project_image2.jpg") center center;
+  /* background: linear-gradient( rgba(4, 88, 245, 0.7), rgba(7, 1, 54, 0.7)); */
   background-size: cover;
-  padding: 100px 60px;
+  padding: 70px 60px;
   border-radius: 15px;
   overflow: hidden;
 }
 
 .call-to-action h3 {
-  color: #fff;
+  color: var(--color-secondary);
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
 .call-to-action p {
-  color: #fff;
+  color: var(--color-default);
   font-size: large;
   margin-bottom: 20px;
 }
