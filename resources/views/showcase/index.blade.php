@@ -9,15 +9,15 @@
   <section id="hero" class="hero" style="height: auto;">
     <div class="w-100 position-relative" style="height: 75vh;">
       <div class="position-relative gy-5" style="height: 100%;" data-aos="fade-in">
-        <div class="position-absolute w-100 d-flex justify-content-end"  style="height: inherit;">
+        {{-- <div class="position-absolute w-100 d-flex justify-content-end"  style="height: inherit;">
           <img src="{{ asset('assets') }}/img/bg2.jpg" class="img-fluid d-none d-md-block" alt="" data-aos="zoom-out" data-aos-delay="100">
-        </div>
-        <div class="position-absolute d-flex flex-column justify-content-center text-center w-100 px-5" style="height: inherit; background-color: rgba(0, 0, 0, 0.2);">
+        </div> --}}
+        <div class="position-absolute d-flex flex-column justify-content-center text-center w-100 px-5" style="height: inherit;">
           <h2 class="text-center">Bienvenue chez <br><span>JRM LAGAGNE CONSTRUCTION</span></h2>
-          <p style="font-size:2rem !important;">La solidité de notre construction, votre tranquillité d'esprit</p>
+          <p style="font-size:2rem !important;">{{ $showcase_variables->business_slogan ?? "La solidité de notre construction, votre tranquillité d'esprit" }}</p>
           <div class="d-flex justify-content-center py-5">
-            <a href="#about" class="btn-get-started">Get Started</a>
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+            <a href="#services" class="btn-get-started">Get Started</a>
+            <a href="{{ $showcase_variables->hero_video_link ?? 'https://www.youtube.com/watch?v=LXb3EKWsInQ' }}" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
           </div>
         </div>
       </div>
@@ -38,7 +38,7 @@
           <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon"><i class="bi bi-phone"></i></div>
-              <h4 class="title"><a href="" class="stretched-link">Contactez-Nous</a></h4>
+              <h4 class="title"><a href="{{ route('public.contact') }}" class="stretched-link">Contactez-Nous</a></h4>
             </div>
           </div>
           <!--End Icon Box -->
@@ -46,7 +46,7 @@
           <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="icon-box">
               <div class="icon"><i class="bi bi-facebook"></i></div>
-              <h4 class="title"><a href="" class="stretched-link">Sur Facebook</a></h4>
+              <h4 class="title"><a href="{{ $showcase_variables->facebook_link ?? '' }}" class="stretched-link">Sur Facebook</a></h4>
             </div>
           </div>
           <!--End Icon Box -->
@@ -54,7 +54,7 @@
           <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
             <div class="icon-box">
               <div class="icon"><i class="bi bi-command"></i></div>
-              <h4 class="title"><a href="" class="stretched-link">Nos Projets</a></h4>
+              <h4 class="title"><a href="{{ route('public.projects') }}" class="stretched-link">Nos Projets</a></h4>
             </div>
           </div>
           <!--End Icon Box -->
@@ -69,9 +69,8 @@
 
   <main id="main">
 
-
     <!-- ======= Our Services Section ======= -->
-    <section id="services" class="services sections-bg">
+    <section id="services" class="services">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
@@ -82,8 +81,8 @@
         <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
 
           <div class="col-xl-3 col-md-4 col-sm-6">
-            <div class="service-item position-relative card">
-              <div class="icon">
+            <div class="service-item position-relative card border-0 bg-white shadow">
+              <div class="icon text">
                 <i class="bi bi-bricks"></i>
               </div>
               <h3>Génie maritime</h3>
@@ -93,8 +92,8 @@
           </div><!-- End Service Item -->
 
           <div class="col-xl-3 col-md-4 col-sm-6">
-            <div class="service-item position-relative card">
-              <div class="icon">
+            <div class="service-item position-relative card border-0 bg-white shadow">
+              <div class="icon text">
                 <i class="bi bi-flag"></i>
               </div>
               <h3>Genie civil</h3>
@@ -104,8 +103,8 @@
           </div><!-- End Service Item -->
 
           <div class="col-xl-3 col-md-4 col-sm-6">
-            <div class="service-item position-relative card">
-              <div class="icon">
+            <div class="service-item position-relative card border-0 bg-white shadow">
+              <div class="icon text">
                 <i class="bi bi-boxes"></i>
               </div>
               <h3>Architecture</h3>
@@ -115,8 +114,8 @@
           </div><!-- End Service Item -->
 
           <div class="col-xl-3 col-md-4 col-sm-6">
-            <div class="service-item position-relative card">
-              <div class="icon">
+            <div class="service-item position-relative card border-0 bg-white shadow">
+              <div class="icon text">
                 <i class="bi bi-cpu"></i>
               </div>
               <h3>Ingénierie</h3>
@@ -126,8 +125,8 @@
           </div><!-- End Service Item -->
 
           <div class="col-xl-3 col-md-4 col-sm-6">
-            <div class="service-item position-relative card">
-              <div class="icon">
+            <div class="service-item position-relative card border-0 bg-white shadow">
+              <div class="icon text">
                 <i class="bi bi-map"></i>
               </div>
               <h3>Immobilier</h3>
@@ -137,8 +136,8 @@
           </div><!-- End Service Item -->
 
           <div class="col-xl-3 col-md-4 col-sm-6">
-            <div class="service-item position-relative card">
-              <div class="icon">
+            <div class="service-item position-relative card border-0 bg-white shadow">
+              <div class="icon text">
                 <i class="bi bi-recycle"></i>
               </div>
               <h3>Recyclage de la matière plastique</h3>
@@ -159,17 +158,23 @@
         <h3 class="text-capitalize">Visitez notre chaîne</h3>
         <p>Explorez notre contenu exclusif en visitant notre chaîne. Découvrez des vidéos captivantes, <br> des conseils utiles et bien plus encore. Abonnez-vous pour ne rien manquer de nos mises à jour régulières <br> et rejoignez notre communauté dès aujourd'hui</p>
         <a class="cta-btn text-capitalize" href="#">Avancez d'un pas</a>
+        <video autoplay loop muted class="position-absolute w-100 h-100" style="left: 0; top: 0; z-index: -10;">
+          <source src="{{ asset('assets/videos/short_video.mp4') }}" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
       </div>
     </section><!-- End Call To Action Section -->
 
     <!-- ======= Stats Counter Section ======= -->
-    <section id="stats-counter" class="stats-counter">
+    <section id="stats-counter" class="stats-counter my-5">
       <div class="container" data-aos="fade-up">
 
         <div class="row gy-4 align-items-center">
 
           <div class="col-lg-6">
-            <img src="{{ asset('assets') }}/img/present.jpg" alt="" class="img-fluid">
+            <div class="mx-auto" style="">
+              <img src="{{ asset('assets/img/project_image2.jpg') }}" alt="" class="img-fluid">
+            </div>
           </div>
 
           <div class="col-lg-6">
@@ -195,7 +200,6 @@
 
       </div>
     </section><!-- End Stats Counter Section -->
-
     
     <!-- ======= Recent Works Section ======= -->
     <section id="recent-posts" class="recent-posts sections-bg">
@@ -209,416 +213,264 @@
         <div class="row gy-4">
 
           <div class="col-xl-3 col-lg-4 col-md-6">
-            <article>
+            <article class="py-3">
 
               <div class="post-img">
                 <img src="{{ asset('assets') }}/img/blog/blog-1.jpg" alt="" class="img-fluid">
               </div>
 
-              <p class="post-category">Service type</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Dolorum optio tempore voluptas dignissimos</a>
+              <h2 class="h6">
+                <a href="blog-details.html"><b>Dolorum optio tempore voluptas dignissimos</b></a>
               </h2>
 
-              <div class="d-flex align-items-center">
-                <img src="{{ asset('assets') }}/img/blog/blog-author.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Maria Doe</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jan 1, 2022</time>
-                  </p>
-                </div>
+              <div class="caption line-clamp-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, et animi voluptates delectus autem ipsam vel distinctio nam molestiae dolore temporibus, vitae fugiat iusto iste, quidem labore libero quae? Ut?
+              </div>
+
+              <div class="d-flex my-3 justify-content-center">
+                <a href="#" class="btn btn-circle btn-default border py-2 px-5" style=""><b>more</b></a>
               </div>
 
             </article>
           </div><!-- End post list item -->
 
           <div class="col-xl-3 col-lg-4 col-md-6">
-            <article>
-
-              <div class="post-img">
-                <img src="{{ asset('assets') }}/img/blog/blog-2.jpg" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Service</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="{{ asset('assets') }}/img/blog/blog-author-2.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Allisa Mayer</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jun 5, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <article>
-
-              <div class="post-img">
-                <img src="{{ asset('assets') }}/img/blog/blog-3.jpg" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Service type</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="{{ asset('assets') }}/img/blog/blog-author-3.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Mark Dower</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jun 22, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <article>
-
-              <div class="post-img">
-                <img src="{{ asset('assets') }}/img/blog/blog-3.jpg" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Service type</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="{{ asset('assets') }}/img/blog/blog-author-3.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Mark Dower</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jun 22, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <article>
+            <article class="py-3">
 
               <div class="post-img">
                 <img src="{{ asset('assets') }}/img/blog/blog-1.jpg" alt="" class="img-fluid">
               </div>
 
-              <p class="post-category">Service type</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Dolorum optio tempore voluptas dignissimos</a>
+              <h2 class="h6">
+                <a href="blog-details.html"><b>Dolorum optio tempore voluptas dignissimos</b></a>
               </h2>
 
-              <div class="d-flex align-items-center">
-                <img src="{{ asset('assets') }}/img/blog/blog-author.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Maria Doe</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jan 1, 2022</time>
-                  </p>
-                </div>
+              <div class="caption line-clamp-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, et animi voluptates delectus autem ipsam vel distinctio nam molestiae dolore temporibus, vitae fugiat iusto iste, quidem labore libero quae? Ut?
+              </div>
+
+              <div class="d-flex my-3 justify-content-center">
+                <a href="#" class="btn btn-circle btn-default border py-2 px-5" style=""><b>more</b></a>
               </div>
 
             </article>
           </div><!-- End post list item -->
 
           <div class="col-xl-3 col-lg-4 col-md-6">
-            <article>
-
-              <div class="post-img">
-                <img src="{{ asset('assets') }}/img/blog/blog-2.jpg" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Service</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="{{ asset('assets') }}/img/blog/blog-author-2.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Allisa Mayer</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jun 5, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <article>
-
-              <div class="post-img">
-                <img src="{{ asset('assets') }}/img/blog/blog-3.jpg" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Service type</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="{{ asset('assets') }}/img/blog/blog-author-3.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Mark Dower</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jun 22, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <article>
-
-              <div class="post-img">
-                <img src="{{ asset('assets') }}/img/blog/blog-3.jpg" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Service type</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="{{ asset('assets') }}/img/blog/blog-author-3.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Mark Dower</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jun 22, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <article>
+            <article class="py-3">
 
               <div class="post-img">
                 <img src="{{ asset('assets') }}/img/blog/blog-1.jpg" alt="" class="img-fluid">
               </div>
 
-              <p class="post-category">Service type</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Dolorum optio tempore voluptas dignissimos</a>
+              <h2 class="h6">
+                <a href="blog-details.html"><b>Dolorum optio tempore voluptas dignissimos</b></a>
               </h2>
 
-              <div class="d-flex align-items-center">
-                <img src="{{ asset('assets') }}/img/blog/blog-author.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Maria Doe</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jan 1, 2022</time>
-                  </p>
-                </div>
+              <div class="caption line-clamp-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, et animi voluptates delectus autem ipsam vel distinctio nam molestiae dolore temporibus, vitae fugiat iusto iste, quidem labore libero quae? Ut?
+              </div>
+
+              <div class="d-flex my-3 justify-content-center">
+                <a href="#" class="btn btn-circle btn-default border py-2 px-5" style=""><b>more</b></a>
               </div>
 
             </article>
           </div><!-- End post list item -->
 
           <div class="col-xl-3 col-lg-4 col-md-6">
-            <article>
-
-              <div class="post-img">
-                <img src="{{ asset('assets') }}/img/blog/blog-2.jpg" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Service</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="{{ asset('assets') }}/img/blog/blog-author-2.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Allisa Mayer</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jun 5, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <article>
-
-              <div class="post-img">
-                <img src="{{ asset('assets') }}/img/blog/blog-3.jpg" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Service type</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="{{ asset('assets') }}/img/blog/blog-author-3.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Mark Dower</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jun 22, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <article>
-
-              <div class="post-img">
-                <img src="{{ asset('assets') }}/img/blog/blog-3.jpg" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Service type</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="{{ asset('assets') }}/img/blog/blog-author-3.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Mark Dower</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jun 22, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <article>
+            <article class="py-3">
 
               <div class="post-img">
                 <img src="{{ asset('assets') }}/img/blog/blog-1.jpg" alt="" class="img-fluid">
               </div>
 
-              <p class="post-category">Service type</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Dolorum optio tempore voluptas dignissimos</a>
+              <h2 class="h6">
+                <a href="blog-details.html"><b>Dolorum optio tempore voluptas dignissimos</b></a>
               </h2>
 
-              <div class="d-flex align-items-center">
-                <img src="{{ asset('assets') }}/img/blog/blog-author.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Maria Doe</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jan 1, 2022</time>
-                  </p>
-                </div>
+              <div class="caption line-clamp-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, et animi voluptates delectus autem ipsam vel distinctio nam molestiae dolore temporibus, vitae fugiat iusto iste, quidem labore libero quae? Ut?
+              </div>
+
+              <div class="d-flex my-3 justify-content-center">
+                <a href="#" class="btn btn-circle btn-default border py-2 px-5" style=""><b>more</b></a>
               </div>
 
             </article>
           </div><!-- End post list item -->
 
           <div class="col-xl-3 col-lg-4 col-md-6">
-            <article>
+            <article class="py-3">
 
               <div class="post-img">
-                <img src="{{ asset('assets') }}/img/blog/blog-2.jpg" alt="" class="img-fluid">
+                <img src="{{ asset('assets') }}/img/blog/blog-1.jpg" alt="" class="img-fluid">
               </div>
 
-              <p class="post-category">Service</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>
+              <h2 class="h6">
+                <a href="blog-details.html"><b>Dolorum optio tempore voluptas dignissimos</b></a>
               </h2>
 
-              <div class="d-flex align-items-center">
-                <img src="{{ asset('assets') }}/img/blog/blog-author-2.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Allisa Mayer</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jun 5, 2022</time>
-                  </p>
-                </div>
+              <div class="caption line-clamp-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, et animi voluptates delectus autem ipsam vel distinctio nam molestiae dolore temporibus, vitae fugiat iusto iste, quidem labore libero quae? Ut?
+              </div>
+
+              <div class="d-flex my-3 justify-content-center">
+                <a href="#" class="btn btn-circle btn-default border py-2 px-5" style=""><b>more</b></a>
               </div>
 
             </article>
           </div><!-- End post list item -->
 
           <div class="col-xl-3 col-lg-4 col-md-6">
-            <article>
+            <article class="py-3">
 
               <div class="post-img">
-                <img src="{{ asset('assets') }}/img/blog/blog-3.jpg" alt="" class="img-fluid">
+                <img src="{{ asset('assets') }}/img/blog/blog-1.jpg" alt="" class="img-fluid">
               </div>
 
-              <p class="post-category">Service type</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
+              <h2 class="h6">
+                <a href="blog-details.html"><b>Dolorum optio tempore voluptas dignissimos</b></a>
               </h2>
 
-              <div class="d-flex align-items-center">
-                <img src="{{ asset('assets') }}/img/blog/blog-author-3.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Mark Dower</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jun 22, 2022</time>
-                  </p>
-                </div>
+              <div class="caption line-clamp-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, et animi voluptates delectus autem ipsam vel distinctio nam molestiae dolore temporibus, vitae fugiat iusto iste, quidem labore libero quae? Ut?
+              </div>
+
+              <div class="d-flex my-3 justify-content-center">
+                <a href="#" class="btn btn-circle btn-default border py-2 px-5" style=""><b>more</b></a>
               </div>
 
             </article>
           </div><!-- End post list item -->
 
           <div class="col-xl-3 col-lg-4 col-md-6">
-            <article>
+            <article class="py-3">
 
               <div class="post-img">
-                <img src="{{ asset('assets') }}/img/blog/blog-3.jpg" alt="" class="img-fluid">
+                <img src="{{ asset('assets') }}/img/blog/blog-1.jpg" alt="" class="img-fluid">
               </div>
 
-              <p class="post-category">Service type</p>
-
-              <h2 class="title">
-                <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
+              <h2 class="h6">
+                <a href="blog-details.html"><b>Dolorum optio tempore voluptas dignissimos</b></a>
               </h2>
 
-              <div class="d-flex align-items-center">
-                <img src="{{ asset('assets') }}/img/blog/blog-author-3.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Mark Dower</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jun 22, 2022</time>
-                  </p>
-                </div>
+              <div class="caption line-clamp-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, et animi voluptates delectus autem ipsam vel distinctio nam molestiae dolore temporibus, vitae fugiat iusto iste, quidem labore libero quae? Ut?
+              </div>
+
+              <div class="d-flex my-3 justify-content-center">
+                <a href="#" class="btn btn-circle btn-default border py-2 px-5" style=""><b>more</b></a>
+              </div>
+
+            </article>
+          </div><!-- End post list item -->
+
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <article class="py-3">
+
+              <div class="post-img">
+                <img src="{{ asset('assets') }}/img/blog/blog-1.jpg" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="h6">
+                <a href="blog-details.html"><b>Dolorum optio tempore voluptas dignissimos</b></a>
+              </h2>
+
+              <div class="caption line-clamp-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, et animi voluptates delectus autem ipsam vel distinctio nam molestiae dolore temporibus, vitae fugiat iusto iste, quidem labore libero quae? Ut?
+              </div>
+
+              <div class="d-flex my-3 justify-content-center">
+                <a href="#" class="btn btn-circle btn-default border py-2 px-5" style=""><b>more</b></a>
+              </div>
+
+            </article>
+          </div><!-- End post list item -->
+
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <article class="py-3">
+
+              <div class="post-img">
+                <img src="{{ asset('assets') }}/img/blog/blog-1.jpg" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="h6">
+                <a href="blog-details.html"><b>Dolorum optio tempore voluptas dignissimos</b></a>
+              </h2>
+
+              <div class="caption line-clamp-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, et animi voluptates delectus autem ipsam vel distinctio nam molestiae dolore temporibus, vitae fugiat iusto iste, quidem labore libero quae? Ut?
+              </div>
+
+              <div class="d-flex my-3 justify-content-center">
+                <a href="#" class="btn btn-circle btn-default border py-2 px-5" style=""><b>more</b></a>
+              </div>
+
+            </article>
+          </div><!-- End post list item -->
+
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <article class="py-3">
+
+              <div class="post-img">
+                <img src="{{ asset('assets') }}/img/blog/blog-1.jpg" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="h6">
+                <a href="blog-details.html"><b>Dolorum optio tempore voluptas dignissimos</b></a>
+              </h2>
+
+              <div class="caption line-clamp-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, et animi voluptates delectus autem ipsam vel distinctio nam molestiae dolore temporibus, vitae fugiat iusto iste, quidem labore libero quae? Ut?
+              </div>
+
+              <div class="d-flex my-3 justify-content-center">
+                <a href="#" class="btn btn-circle btn-default border py-2 px-5" style=""><b>more</b></a>
+              </div>
+
+            </article>
+          </div><!-- End post list item -->
+
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <article class="py-3">
+
+              <div class="post-img">
+                <img src="{{ asset('assets') }}/img/blog/blog-1.jpg" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="h6">
+                <a href="blog-details.html"><b>Dolorum optio tempore voluptas dignissimos</b></a>
+              </h2>
+
+              <div class="caption line-clamp-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, et animi voluptates delectus autem ipsam vel distinctio nam molestiae dolore temporibus, vitae fugiat iusto iste, quidem labore libero quae? Ut?
+              </div>
+
+              <div class="d-flex my-3 justify-content-center">
+                <a href="#" class="btn btn-circle btn-default border py-2 px-5" style=""><b>more</b></a>
+              </div>
+
+            </article>
+          </div><!-- End post list item -->
+
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <article class="py-3">
+
+              <div class="post-img">
+                <img src="{{ asset('assets') }}/img/blog/blog-1.jpg" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="h6">
+                <a href="blog-details.html"><b>Dolorum optio tempore voluptas dignissimos</b></a>
+              </h2>
+
+              <div class="caption line-clamp-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, et animi voluptates delectus autem ipsam vel distinctio nam molestiae dolore temporibus, vitae fugiat iusto iste, quidem labore libero quae? Ut?
+              </div>
+
+              <div class="d-flex my-3 justify-content-center">
+                <a href="#" class="btn btn-circle btn-default border py-2 px-5" style=""><b>more</b></a>
               </div>
 
             </article>
@@ -628,7 +480,6 @@
 
       </div>
     </section><!-- End Recent Works Section -->
-
 
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials">
@@ -646,10 +497,9 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item team">
                   <div class="member">
-                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
-                    <h4>Project name or Service type</h4>
-                    <span>Address</span>
-                    <div class="social line-clamp-4">
+                    <img src="{{ asset('assets/img/bg2.jpg') }}" class="img-fluid" alt="">
+                    <h6 class="my-2" style="color:darkslategray;"><b>Project name or Service type</b></h6>
+                    <div class="caption line-clamp-4">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
                     </div>
                   </div>
@@ -660,10 +510,9 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item team">
                   <div class="member">
-                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
-                    <h4>Project name or Service type</h4>
-                    <span>Address</span>
-                    <div class="social line-clamp-4">
+                    <img src="{{ asset('assets/img/bg2.jpg') }}" class="img-fluid" alt="">
+                    <h6 class="my-2" style="color:darkslategray;"><b>Project name or Service type</b></h6>
+                    <div class="caption line-clamp-4">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
                     </div>
                   </div>
@@ -674,10 +523,9 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item team">
                   <div class="member">
-                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
-                    <h4>Project name or Service type</h4>
-                    <span>Address</span>
-                    <div class="social line-clamp-4">
+                    <img src="{{ asset('assets/img/bg2.jpg') }}" class="img-fluid" alt="">
+                    <h6 class="my-2" style="color:darkslategray;"><b>Project name or Service type</b></h6>
+                    <div class="caption line-clamp-4">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
                     </div>
                   </div>
@@ -688,10 +536,9 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item team">
                   <div class="member">
-                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
-                    <h4>Project name or Service type</h4>
-                    <span>Address</span>
-                    <div class="social line-clamp-4">
+                    <img src="{{ asset('assets/img/bg2.jpg') }}" class="img-fluid" alt="">
+                    <h6 class="my-2" style="color:darkslategray;"><b>Project name or Service type</b></h6>
+                    <div class="caption line-clamp-4">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
                     </div>
                   </div>
@@ -702,10 +549,9 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item team">
                   <div class="member">
-                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
-                    <h4>Project name or Service type</h4>
-                    <span>Address</span>
-                    <div class="social line-clamp-4">
+                    <img src="{{ asset('assets/img/bg2.jpg') }}" class="img-fluid" alt="">
+                    <h6 class="my-2" style="color:darkslategray;"><b>Project name or Service type</b></h6>
+                    <div class="caption line-clamp-4">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
                     </div>
                   </div>
@@ -716,10 +562,9 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item team">
                   <div class="member">
-                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
-                    <h4>Project name or Service type</h4>
-                    <span>Address</span>
-                    <div class="social line-clamp-4">
+                    <img src="{{ asset('assets/img/bg2.jpg') }}" class="img-fluid" alt="">
+                    <h6 class="my-2" style="color:darkslategray;"><b>Project name or Service type</b></h6>
+                    <div class="caption line-clamp-4">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
                     </div>
                   </div>
@@ -730,10 +575,9 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item team">
                   <div class="member">
-                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
-                    <h4>Project name or Service type</h4>
-                    <span>Address</span>
-                    <div class="social line-clamp-4">
+                    <img src="{{ asset('assets/img/bg2.jpg') }}" class="img-fluid" alt="">
+                    <h6 class="my-2" style="color:darkslategray;"><b>Project name or Service type</b></h6>
+                    <div class="caption line-clamp-4">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
                     </div>
                   </div>
@@ -744,10 +588,9 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item team">
                   <div class="member">
-                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
-                    <h4>Project name or Service type</h4>
-                    <span>Address</span>
-                    <div class="social line-clamp-4">
+                    <img src="{{ asset('assets/img/bg2.jpg') }}" class="img-fluid" alt="">
+                    <h6 class="my-2" style="color:darkslategray;"><b>Project name or Service type</b></h6>
+                    <div class="caption line-clamp-4">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
                     </div>
                   </div>
@@ -758,10 +601,9 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item team">
                   <div class="member">
-                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
-                    <h4>Project name or Service type</h4>
-                    <span>Address</span>
-                    <div class="social line-clamp-4">
+                    <img src="{{ asset('assets/img/bg2.jpg') }}" class="img-fluid" alt="">
+                    <h6 class="my-2" style="color:darkslategray;"><b>Project name or Service type</b></h6>
+                    <div class="caption line-clamp-4">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
                     </div>
                   </div>
@@ -772,192 +614,9 @@
               <div class="testimonial-wrap">
                 <div class="testimonial-item team">
                   <div class="member">
-                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
-                    <h4>Project name or Service type</h4>
-                    <span>Address</span>
-                    <div class="social line-clamp-4">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item team">
-                  <div class="member">
-                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
-                    <h4>Project name or Service type</h4>
-                    <span>Address</span>
-                    <div class="social line-clamp-4">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item team">
-                  <div class="member">
-                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
-                    <h4>Project name or Service type</h4>
-                    <span>Address</span>
-                    <div class="social line-clamp-4">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item team">
-                  <div class="member">
-                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
-                    <h4>Project name or Service type</h4>
-                    <span>Address</span>
-                    <div class="social line-clamp-4">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item team">
-                  <div class="member">
-                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
-                    <h4>Project name or Service type</h4>
-                    <span>Address</span>
-                    <div class="social line-clamp-4">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item team">
-                  <div class="member">
-                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
-                    <h4>Project name or Service type</h4>
-                    <span>Address</span>
-                    <div class="social line-clamp-4">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item team">
-                  <div class="member">
-                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
-                    <h4>Project name or Service type</h4>
-                    <span>Address</span>
-                    <div class="social line-clamp-4">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item team">
-                  <div class="member">
-                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
-                    <h4>Project name or Service type</h4>
-                    <span>Address</span>
-                    <div class="social line-clamp-4">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item team">
-                  <div class="member">
-                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
-                    <h4>Project name or Service type</h4>
-                    <span>Address</span>
-                    <div class="social line-clamp-4">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item team">
-                  <div class="member">
-                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
-                    <h4>Project name or Service type</h4>
-                    <span>Address</span>
-                    <div class="social line-clamp-4">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item team">
-                  <div class="member">
-                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
-                    <h4>Project name or Service type</h4>
-                    <span>Address</span>
-                    <div class="social line-clamp-4">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item team">
-                  <div class="member">
-                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
-                    <h4>Project name or Service type</h4>
-                    <span>Address</span>
-                    <div class="social line-clamp-4">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item team">
-                  <div class="member">
-                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
-                    <h4>Project name or Service type</h4>
-                    <span>Address</span>
-                    <div class="social line-clamp-4">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item team">
-                  <div class="member">
-                    <img src="{{ asset('assets') }}/img/team/team-1.jpg" class="img-fluid" alt="">
-                    <h4>Project name or Service type</h4>
-                    <span>Address</span>
-                    <div class="social line-clamp-4">
+                    <img src="{{ asset('assets/img/bg2.jpg') }}" class="img-fluid" alt="">
+                    <h6 class="my-2" style="color:darkslategray;"><b>Project name or Service type</b></h6>
+                    <div class="caption line-clamp-4">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
                     </div>
                   </div>
@@ -972,157 +631,7 @@
       </div>
     </section><!-- End Testimonials Section -->
 
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio sections-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-          <h2>Portfolio</h2>
-          <p>Quam sed id excepturi ccusantium dolorem ut quis dolores nisi llum nostrum enim velit qui ut et autem uia reprehenderit sunt deleniti</p>
-        </div>
-
-        <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
-
-          <div>
-            <ul class="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-product">Product</li>
-              <li data-filter=".filter-branding">Branding</li>
-              <li data-filter=".filter-books">Books</li>
-            </ul><!-- End Portfolio Filters -->
-          </div>
-
-          <div class="row gy-4 portfolio-container">
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">App 1</a></h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-product">
-              <div class="portfolio-wrap">
-                <a href="{{ asset('assets') }}/img/portfolio/product-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/product-1.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">Product 1</a></h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-branding">
-              <div class="portfolio-wrap">
-                <a href="{{ asset('assets') }}/img/portfolio/branding-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/branding-1.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">Branding 1</a></h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-books">
-              <div class="portfolio-wrap">
-                <a href="{{ asset('assets') }}/img/portfolio/books-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/books-1.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">Books 1</a></h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <a href="{{ asset('assets') }}/img/portfolio/app-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-2.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">App 2</a></h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-product">
-              <div class="portfolio-wrap">
-                <a href="{{ asset('assets') }}/img/portfolio/product-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/product-2.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">Product 2</a></h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-branding">
-              <div class="portfolio-wrap">
-                <a href="{{ asset('assets') }}/img/portfolio/branding-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/branding-2.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">Branding 2</a></h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-books">
-              <div class="portfolio-wrap">
-                <a href="{{ asset('assets') }}/img/portfolio/books-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/books-2.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">Books 2</a></h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <a href="{{ asset('assets') }}/img/portfolio/app-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-3.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">App 3</a></h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-product">
-              <div class="portfolio-wrap">
-                <a href="{{ asset('assets') }}/img/portfolio/product-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/product-3.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">Product 3</a></h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-branding">
-              <div class="portfolio-wrap">
-                <a href="{{ asset('assets') }}/img/portfolio/branding-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/branding-3.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">Branding 3</a></h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-books">
-              <div class="portfolio-wrap">
-                <a href="{{ asset('assets') }}/img/portfolio/books-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/books-3.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4><a href="portfolio-details.html" title="More Details">Books 3</a></h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
-
+    {{-- 
     <!-- ======= Our Team Section ======= -->
     <section id="team" class="team">
       <div class="container" data-aos="fade-up">
@@ -1193,10 +702,10 @@
         </div>
 
       </div>
-    </section><!-- End Our Team Section -->
+    </section><!-- End Our Team Section --> --}}
 
     <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing sections-bg">
+    <section id="pricing" class="pricing">
       <div class="container" data-aos="fade-up">
 
         {{-- <div class="section-header">
@@ -1245,7 +754,169 @@
       </div>
     </section><!-- End Pricing Section -->
 
-    <!-- ======= Frequently Asked Questions Section ======= -->
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio sections-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Portfolio</h2>
+          <p>Quam sed id excepturi ccusantium dolorem ut quis dolores nisi llum nostrum enim velit qui ut et autem uia reprehenderit sunt deleniti</p>
+        </div>
+
+        <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
+
+          {{-- <div>
+            <ul class="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-product">Product</li>
+              <li data-filter=".filter-branding">Branding</li>
+              <li data-filter=".filter-books">Books</li>
+            </ul><!-- End Portfolio Filters -->
+          </div> --}}
+
+          <div class="row gy-4 portfolio-container">
+
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                  <h4>App 1</h4>
+                  <div class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates dicta consequuntur, optio eos quaerat, asperiores, vel pariatur reprehenderit perferendis repellat placeat. Aut corrupti esse, fugiat necessitatibus quis eos a?</div>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                  <h4>App 1</h4>
+                  <div class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates dicta consequuntur, optio eos quaerat, asperiores, vel pariatur reprehenderit perferendis repellat placeat. Aut corrupti esse, fugiat necessitatibus quis eos a?</div>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                  <h4>App 1</h4>
+                  <div class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates dicta consequuntur, optio eos quaerat, asperiores, vel pariatur reprehenderit perferendis repellat placeat. Aut corrupti esse, fugiat necessitatibus quis eos a?</div>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                  <h4>App 1</h4>
+                  <div class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates dicta consequuntur, optio eos quaerat, asperiores, vel pariatur reprehenderit perferendis repellat placeat. Aut corrupti esse, fugiat necessitatibus quis eos a?</div>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                  <h4>App 1</h4>
+                  <div class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates dicta consequuntur, optio eos quaerat, asperiores, vel pariatur reprehenderit perferendis repellat placeat. Aut corrupti esse, fugiat necessitatibus quis eos a?</div>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                  <h4>App 1</h4>
+                  <div class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates dicta consequuntur, optio eos quaerat, asperiores, vel pariatur reprehenderit perferendis repellat placeat. Aut corrupti esse, fugiat necessitatibus quis eos a?</div>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                  <h4>App 1</h4>
+                  <div class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates dicta consequuntur, optio eos quaerat, asperiores, vel pariatur reprehenderit perferendis repellat placeat. Aut corrupti esse, fugiat necessitatibus quis eos a?</div>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                  <h4>App 1</h4>
+                  <div class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates dicta consequuntur, optio eos quaerat, asperiores, vel pariatur reprehenderit perferendis repellat placeat. Aut corrupti esse, fugiat necessitatibus quis eos a?</div>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                  <h4>App 1</h4>
+                  <div class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates dicta consequuntur, optio eos quaerat, asperiores, vel pariatur reprehenderit perferendis repellat placeat. Aut corrupti esse, fugiat necessitatibus quis eos a?</div>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                  <h4>App 1</h4>
+                  <div class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates dicta consequuntur, optio eos quaerat, asperiores, vel pariatur reprehenderit perferendis repellat placeat. Aut corrupti esse, fugiat necessitatibus quis eos a?</div>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                  <h4>App 1</h4>
+                  <div class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates dicta consequuntur, optio eos quaerat, asperiores, vel pariatur reprehenderit perferendis repellat placeat. Aut corrupti esse, fugiat necessitatibus quis eos a?</div>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                  <h4>App 1</h4>
+                  <div class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates dicta consequuntur, optio eos quaerat, asperiores, vel pariatur reprehenderit perferendis repellat placeat. Aut corrupti esse, fugiat necessitatibus quis eos a?</div>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    {{-- <!-- ======= Frequently Asked Questions Section ======= -->
     <section id="faq" class="faq">
       <div class="container" data-aos="fade-up">
 
@@ -1339,9 +1010,9 @@
           </div>
         </div>
       </div>
-    </section><!-- End Frequently Asked Questions Section -->
-
-    <!-- ======= Contact Section ======= -->
+    </section><!-- End Frequently Asked Questions Section --> --}}
+    
+    {{-- <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
 
@@ -1418,8 +1089,8 @@
         </div>
 
       </div>
-    </section><!-- End Contact Section -->
-
+    </section><!-- End Contact Section --> --}}
+   
   </main><!-- End #main -->
   
 @endsection

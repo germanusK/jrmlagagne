@@ -43,9 +43,9 @@
             <i class="bi bi-phone d-flex align-items-center ms-4"><a href="tel:+237 653 640 001">+237 653 640 001</a></i>
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
-            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="{{ $showcase_variables->twittter_link ?? '' }}" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="{{ $showcase_variables->facebook_link ?? '' }}" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="{{ $showcase_variables->instagram_link ?? '' }}" class="instagram"><i class="bi bi-instagram"></i></a>
         </div>
         </div>
     </section><!-- End Top Bar -->
@@ -53,55 +53,39 @@
     <header id="header" class="header d-flex align-items-center">
 
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
-            <!-- Uncomment the line below if you also wish to use an image logo -->
-            <img src="{{ asset('assets') }}/img/logo.gif" alt="">
-            <h1>JRM Lagagne<span>.</span></h1>
-        </a>
-        <nav id="navbar" class="navbar text-capitalize">
-            <ul>
-                <li><a href="#hero">accueil</a></li>
-                <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                    <ul>
-                    <li><a href="#">Drop Down 1</a></li>
-                    <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <a href="{{ route('public.home') }}" class="logo d-flex align-items-center">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <img src="{{ asset('assets') }}/img/logo.gif" alt="">
+                <h1>JRM Lagagne Construction<span>.</span></h1>
+            </a>
+            <nav id="navbar" class="navbar text-capitalize">
+                <ul>
+                    <li><a href="{{ route('public.home') }}">accueil</a></li>
+                    <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                         <ul>
-                        <li><a href="#">Deep Drop Down 1</a></li>
-                        <li><a href="#">Deep Drop Down 2</a></li>
-                        <li><a href="#">Deep Drop Down 3</a></li>
-                        <li><a href="#">Deep Drop Down 4</a></li>
-                        <li><a href="#">Deep Drop Down 5</a></li>
+                            <li><a href="{{ route('public.home') }}#services">All Services</a></li>
+                            <li><a href="{{ route('public.service', ['slug'=>'slug']) }}">Service 1</a></li>
+                            <li><a href="{{ route('public.service', ['slug'=>'slug']) }}">Service 2</a></li>
+                            <li><a href="{{ route('public.service', ['slug'=>'slug']) }}">Service 3</a></li>
+                            <li><a href="{{ route('public.service', ['slug'=>'slug']) }}">Service 4</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Drop Down 2</a></li>
-                    <li><a href="#">Drop Down 3</a></li>
-                    <li><a href="#">Drop Down 4</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown"><a href="#"><span>projects</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                    <ul>
-                    <li><a href="#">Drop Down 1</a></li>
-                    <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <li class="dropdown"><a href="#"><span>projects</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                         <ul>
-                        <li><a href="#">Deep Drop Down 1</a></li>
-                        <li><a href="#">Deep Drop Down 2</a></li>
-                        <li><a href="#">Deep Drop Down 3</a></li>
-                        <li><a href="#">Deep Drop Down 4</a></li>
-                        <li><a href="#">Deep Drop Down 5</a></li>
+                        <li><a href="{{ route('public.projects') }}">All Projects</a></li>
+                        <li><a href="{{ route('public.projects', ['service_slug'=>'service']) }}">Service 1</a></li>
+                        <li><a href="{{ route('public.projects', ['service_slug'=>'service']) }}">Service 2</a></li>
+                        <li><a href="{{ route('public.projects', ['service_slug'=>'service']) }}">Service 3</a></li>
+                        <li><a href="{{ route('public.projects', ['service_slug'=>'service']) }}">Service 4</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Drop Down 2</a></li>
-                    <li><a href="#">Drop Down 3</a></li>
-                    <li><a href="#">Drop Down 4</a></li>
-                    </ul>
-                </li>
-                <li><a href="#about">à propos</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav><!-- .navbar -->
+                    <li><a href="{{ route('public.about') }}">à propos</a></li>
+                    <li><a href="{{ route('public.contact') }}">Contact</a></li>
+                </ul>
+            </nav><!-- .navbar -->
 
-        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 
         </div>
     </header><!-- End Header -->
@@ -117,7 +101,7 @@
         <div class="container">
         <div class="row gy-4">
             <div class="col-lg-5 col-md-12 footer-info">
-                <a href="index.html" class="logo d-flex align-items-center">
+                <a href="{{ route('public.home') }}" class="logo" style="line-height: 2rem;">
                     <span>JRM LAGAGNE CONSTRUCTION</span>
                 </a>
                 <p>Entreprise constituée de Jeunes diplômés qualifiés chacun dans son domaine de compétence. Ses activités principales sont dans le Génie Maritime, le Génie Civil, l’Ingénierie, l’Architecture, la Construction Mécanique, la Construction Métallique, la Menuiserie métallique, aluminium et Inox. Ses réalisations respecte le rapport qualité prix dans le respect des normes et des délais de livraison</p>
@@ -131,11 +115,11 @@
             <div class="col-lg-2 col-6 footer-links">
                 <h4>Liens Utiles</h4>
                 <ul>
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="#">À propos</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Projets</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="{{ route('public.home') }}">Accueil</a></li>
+                    <li><a href="{{ route('public.about') }}">À propos</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="{{ route('public.projects') }}">Projets</a></li>
+                    <li><a href="{{ route('public.contact') }}">Contact</a></li>
                 </ul>
             </div>
 
@@ -157,9 +141,9 @@
                     Carrefour BOCOM, Dombe <br>
                     Kribi, Région Sud<br>
                     Cameroun <br><br>
-                    <strong>Phone:</strong> +237 695209244/694393145/658550208<br>
-                    <strong>Email:</strong> info@jrmlagagne.com<br>
-                    <strong>Email2:</strong> jrmlagagne@gmail.com<br>
+                    <strong>Phone:</strong> <a href="tel:+237695209244">+237 695209244/694393145/658550208</a><br>
+                    <strong>Email:</strong> <a href="mailto:info@jrmlagagne.com">info@jrmlagagne.com</a><br>
+                    <strong>Email2:</strong> <a href="mailto:jrmlagagne@gmail.com">jrmlagagne@gmail.com</a><br>
                 </p>
             </div>
 

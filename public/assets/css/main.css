@@ -20,7 +20,7 @@
 :root {
   --color-default: #222222;
   --color-primary: rgb(20, 18, 54);
-  --color-primary-transparent: rgba(20, 18, 54, 0.9);
+  --color-primary-transparent: rgba(20, 18, 54, 0.8);
   --color-secondary: #1f1a6e;
 }
 
@@ -440,7 +440,7 @@ section {
     font-size: 15px;
     text-transform: none;
     font-weight: 600;
-    color: #006a5d;
+    color: var(--color-primary);
   }
 
   .navbar .dropdown ul a i {
@@ -511,7 +511,7 @@ section {
     inset: 0;
     padding: 50px 0 10px 0;
     margin: 0;
-    background: rgba(0, 131, 116, 0.9);
+    background: var(--color-primary-transparent);
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
@@ -567,7 +567,7 @@ section {
     padding: 10px 0;
     margin: 10px 20px;
     transition: all 0.5s ease-in-out;
-    background-color: #007466;
+    background-color: var(--color-primary);
     border: 1px solid #006459;
   }
 
@@ -988,7 +988,7 @@ section {
 }
 
 .services .service-item .icon i {
-  color: var(--color-default);
+  color: var(--color-secondary);
   font-size: 56px;
   transition: ease-in-out 0.3s;
   z-index: 2;
@@ -1009,7 +1009,7 @@ section {
 }
 
 .services .service-item h3 {
-  color: var(--color-default);
+  color: var(--color-secondary);
   font-weight: 700;
   margin: 0 0 20px 0;
   padding-bottom: 8px;
@@ -1049,11 +1049,11 @@ section {
 
 .testimonials .testimonial-item {
   box-sizing: content-box;
-  padding: 30px;
+  padding: 2px;
   margin: 30px 10px;
   box-shadow: 0px 0 15px rgba(0, 0, 0, 0.1);
   position: relative;
-  background: #fff;
+  background: rgb(212, 212, 212);
   border-radius: 10px;
 }
 
@@ -1087,7 +1087,7 @@ section {
 
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
-  color: #009d8b;
+  color: var(--color-secondary);
   font-size: 26px;
   line-height: 0;
 }
@@ -1330,7 +1330,7 @@ section {
 }
 
 .portfolio-details .portfolio-info .btn-visit:hover {
-  background: #009d8b;
+  background: var(--color-secondary);
 }
 
 .portfolio-details .portfolio-description h2 {
@@ -1374,7 +1374,7 @@ section {
 
 .portfolio-details .portfolio-description .testimonial-item .quote-icon-left,
 .portfolio-details .portfolio-description .testimonial-item .quote-icon-right {
-  color: #009d8b;
+  color: var(--color-secondary);
   font-size: 26px;
   line-height: 0;
 }
@@ -1406,7 +1406,7 @@ section {
   text-align: center;
   background: #fff;
   border-radius: 10px;
-  padding: 15px;
+  padding: 10px;
   overflow: hidden;
   box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
 }
@@ -1567,7 +1567,7 @@ section {
 }
 
 .pricing ul i {
-  color: #059652;
+  color: var(--color-primary);
   font-size: 24px;
   padding-right: 3px;
 }
@@ -1748,16 +1748,16 @@ section {
 # Contact Section
 --------------------------------------------------------------*/
 .contact .info-container {
-  background-color: var(--color-primary);
+  background-color: var(--color-white);
   height: 100%;
   padding: 20px;
   border-radius: 10px 0 0 10px;
-  box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.3);
 }
 
 .contact .info-item {
   width: 100%;
-  background-color: #009282;
+  background-color: var(--color-primary-transparent);
   margin-bottom: 20px;
   padding: 20px;
   border-radius: 10px;
@@ -1830,7 +1830,7 @@ section {
 .contact .php-email-form .sent-message {
   display: none;
   color: #fff;
-  background: #059652;
+  background: var(--color-primary);
   text-align: center;
   padding: 15px;
   font-weight: 600;
@@ -1850,7 +1850,7 @@ section {
   width: 24px;
   height: 24px;
   margin: 0 10px -6px 0;
-  border: 3px solid #059652;
+  border: 3px solid var(--color-primary);
   border-top-color: #fff;
   -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;
@@ -2724,6 +2724,7 @@ EXTRA/GENERAL CSS
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;  
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .line-clamp-6 {
@@ -2731,4 +2732,5 @@ EXTRA/GENERAL CSS
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;  
   overflow: hidden;
+  text-overflow: ellipsis;
 }
