@@ -4,11 +4,12 @@
       # set project public folder or deployment folder
       - export DEPLOYPATH=/home/refhcare/public_html/jrmlagagne
       - export REPOPATH=/home/refhcare/repositories/jrmlagagne
+      - export DATAPATH=/home/refhcare/data/jrmlagagne
 
       # copy contents of the public folder alongside composer.json and composer lock into public folder
-      - yes | cp $REPOPATH/data_info/.env $DEPLOYPATH
-      - cp -r $REPOPATH/repo/* $DEPLOYPATH
-      - cp -r $REPOPATH/repo/.* $DEPLOYPATH
+      - yes | cp $DATAPATH/.env $DEPLOYPATH
+      - cp -r $REPOPATH/* $DEPLOYPATH
+      - cp -r $REPOPATH/.* $DEPLOYPATH
 
       - chmod -R 0777 $DEPLOYPATH/public
 
@@ -16,3 +17,4 @@
       - cd $DEPLOYPATH
       - composer install
       - php artisan optimize:clear
+      - php artisan cache:config
