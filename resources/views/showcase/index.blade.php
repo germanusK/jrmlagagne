@@ -12,7 +12,7 @@
         {{-- <div class="position-absolute w-100 d-flex justify-content-end"  style="height: inherit;">
           <img src="{{ asset('assets') }}/img/bg2.jpg" class="img-fluid d-none d-md-block" alt="" data-aos="zoom-out" data-aos-delay="100">
         </div> --}}
-        <div class="position-absolute d-flex flex-column justify-content-center text-center w-100 px-5" style="height: inherit;">
+        <div class="d-flex flex-column justify-content-center text-center mx-auto shadow rounded px-5" style="height: inherit; background-color: rgba(1,5,25,0);">
           <h2 class="text-center">Bienvenue chez <br><span>JRM LAGAGNE CONSTRUCTION</span></h2>
           <p style="font-size:2rem !important;">{{ $showcase_variables->business_slogan ?? "La solidité de notre construction, votre tranquillité d'esprit" }}</p>
           <div class="d-flex justify-content-center py-5">
@@ -80,7 +80,7 @@
 
         <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
 
-          <div class="col-xl-3 col-md-4 col-sm-6">
+          <div class="col-lg-4 col-md-6">
             <div class="service-item position-relative card border-0 bg-white shadow">
               <div class="icon text">
                 <i class="bi bi-bricks"></i>
@@ -91,7 +91,7 @@
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-xl-3 col-md-4 col-sm-6">
+          <div class="col-lg-4 col-md-6">
             <div class="service-item position-relative card border-0 bg-white shadow">
               <div class="icon text">
                 <i class="bi bi-flag"></i>
@@ -102,7 +102,7 @@
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-xl-3 col-md-4 col-sm-6">
+          <div class="col-lg-4 col-md-6">
             <div class="service-item position-relative card border-0 bg-white shadow">
               <div class="icon text">
                 <i class="bi bi-boxes"></i>
@@ -113,7 +113,7 @@
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-xl-3 col-md-4 col-sm-6">
+          <div class="col-lg-4 col-md-6">
             <div class="service-item position-relative card border-0 bg-white shadow">
               <div class="icon text">
                 <i class="bi bi-cpu"></i>
@@ -124,7 +124,7 @@
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-xl-3 col-md-4 col-sm-6">
+          <div class="col-lg-4 col-md-6">
             <div class="service-item position-relative card border-0 bg-white shadow">
               <div class="icon text">
                 <i class="bi bi-map"></i>
@@ -135,7 +135,7 @@
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-xl-3 col-md-4 col-sm-6">
+          <div class="col-lg-4 col-md-6">
             <div class="service-item position-relative card border-0 bg-white shadow">
               <div class="icon text">
                 <i class="bi bi-recycle"></i>
@@ -212,7 +212,7 @@
 
         <div class="row gy-4">
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6">
             <article class="py-3">
 
               <div class="post-img">
@@ -234,7 +234,7 @@
             </article>
           </div><!-- End post list item -->
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6">
             <article class="py-3">
 
               <div class="post-img">
@@ -256,7 +256,7 @@
             </article>
           </div><!-- End post list item -->
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6">
             <article class="py-3">
 
               <div class="post-img">
@@ -278,7 +278,7 @@
             </article>
           </div><!-- End post list item -->
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6">
             <article class="py-3">
 
               <div class="post-img">
@@ -300,7 +300,7 @@
             </article>
           </div><!-- End post list item -->
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6">
             <article class="py-3">
 
               <div class="post-img">
@@ -322,7 +322,7 @@
             </article>
           </div><!-- End post list item -->
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6">
             <article class="py-3">
 
               <div class="post-img">
@@ -344,7 +344,7 @@
             </article>
           </div><!-- End post list item -->
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6">
             <article class="py-3">
 
               <div class="post-img">
@@ -366,7 +366,7 @@
             </article>
           </div><!-- End post list item -->
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6">
             <article class="py-3">
 
               <div class="post-img">
@@ -388,7 +388,7 @@
             </article>
           </div><!-- End post list item -->
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6">
             <article class="py-3">
 
               <div class="post-img">
@@ -410,7 +410,7 @@
             </article>
           </div><!-- End post list item -->
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6">
             <article class="py-3">
 
               <div class="post-img">
@@ -432,7 +432,7 @@
             </article>
           </div><!-- End post list item -->
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6">
             <article class="py-3">
 
               <div class="post-img">
@@ -454,7 +454,7 @@
             </article>
           </div><!-- End post list item -->
 
-          <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6">
             <article class="py-3">
 
               <div class="post-img">
@@ -777,7 +777,7 @@
 
           <div class="row gy-4 portfolio-container">
 
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
               <div class="portfolio-wrap">
                 <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
                 <div class="portfolio-info">
@@ -788,7 +788,7 @@
             </div><!-- End Portfolio Item -->
 
             
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
               <div class="portfolio-wrap">
                 <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
                 <div class="portfolio-info">
@@ -799,7 +799,7 @@
             </div><!-- End Portfolio Item -->
 
             
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
               <div class="portfolio-wrap">
                 <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
                 <div class="portfolio-info">
@@ -810,7 +810,7 @@
             </div><!-- End Portfolio Item -->
 
             
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
               <div class="portfolio-wrap">
                 <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
                 <div class="portfolio-info">
@@ -821,7 +821,7 @@
             </div><!-- End Portfolio Item -->
 
             
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
               <div class="portfolio-wrap">
                 <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
                 <div class="portfolio-info">
@@ -832,7 +832,7 @@
             </div><!-- End Portfolio Item -->
 
             
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
               <div class="portfolio-wrap">
                 <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
                 <div class="portfolio-info">
@@ -843,7 +843,7 @@
             </div><!-- End Portfolio Item -->
 
             
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
               <div class="portfolio-wrap">
                 <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
                 <div class="portfolio-info">
@@ -854,7 +854,7 @@
             </div><!-- End Portfolio Item -->
 
             
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
               <div class="portfolio-wrap">
                 <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
                 <div class="portfolio-info">
@@ -865,7 +865,7 @@
             </div><!-- End Portfolio Item -->
 
             
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
               <div class="portfolio-wrap">
                 <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
                 <div class="portfolio-info">
@@ -876,7 +876,7 @@
             </div><!-- End Portfolio Item -->
 
             
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
               <div class="portfolio-wrap">
                 <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
                 <div class="portfolio-info">
@@ -887,7 +887,7 @@
             </div><!-- End Portfolio Item -->
 
             
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
               <div class="portfolio-wrap">
                 <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
                 <div class="portfolio-info">
@@ -898,7 +898,7 @@
             </div><!-- End Portfolio Item -->
 
             
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
               <div class="portfolio-wrap">
                 <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
                 <div class="portfolio-info">

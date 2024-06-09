@@ -42,6 +42,11 @@ a {
   text-decoration: none;
 }
 
+footer a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
 a:hover {
   color: var(--color-secondary);
   text-decoration: none;
