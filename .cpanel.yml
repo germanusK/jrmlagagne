@@ -7,8 +7,8 @@
       - export DATAPATH=/home/refhcare/repositories/data/jrmlagagne
 
       # copy contents of the public folder alongside composer.json and composer lock into public folder
-      - cp -r $REPOPATH/public/* $DEPLOYPATH
-      - cp -r $REPOPATH/public/.* $DEPLOYPATH
+      - yes | cp -r $REPOPATH/public/* $DEPLOYPATH
+      - yes | cp -r $REPOPATH/public/.* $DEPLOYPATH
       - yes | cp $REPOPATH/composer.json $DEPLOYPATH
       - yes | cp $REPOPATH/composer-lock.json $DEPLOYPATH
       - yes | cp $DATAPATH/.env $DEPLOYPATH
