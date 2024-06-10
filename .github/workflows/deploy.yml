@@ -1,32 +1,32 @@
-name: Deploy Laravel to Namecheap
+# name: Deploy Laravel to Namecheap
 
-on:
-  push:
-    branches:
-      - master  # Triggers the action on pushes to the 'main' branch
+# on:
+#   push:
+#     branches:
+#       - master  # Triggers the action on pushes to the 'main' branch
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
 
-    steps:
-    -name: export variables
-      run: |
-        export REPOPATH=/home/refhcare/repositories/jrmlagagne
-    - name: Checkout code
-      uses: actions/checkout@v3
+#     steps:
+#     -name: export variables
+#       run: |
+#         export REPOPATH=/home/refhcare/repositories/jrmlagagne
+#     - name: Checkout code
+#       uses: actions/checkout@v3
 
-    - name: Install dependencies
-      run: |
-        composer install --no-dev --optimize-autoloadefa-rotate-180
+#     - name: Install dependencies
+#       run: |
+#         composer install --no-dev --optimize-autoloadefa-rotate-180
 
-    - name: Deploy to Namecheap via FTP
-      uses: SamKirkland/FTP-Deploy-Action@4.3.0
-      with:
-        server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./  # The local directory to upload from
-        server-dir: $REPOPATH  # The remote directory to upload to
+#     - name: Deploy to Namecheap via FTP
+#       uses: SamKirkland/FTP-Deploy-Action@4.3.0
+#       with:
+#         server: ${{ secrets.FTP_SERVER }}
+#         username: ${{ secrets.FTP_USERNAME }}
+#         password: ${{ secrets.FTP_PASSWORD }}
+#         local-dir: ./  # The local directory to upload from
+#         server-dir: $REPOPATH  # The remote directory to upload to
 
 
