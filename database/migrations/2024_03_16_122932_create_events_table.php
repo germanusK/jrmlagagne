@@ -22,7 +22,6 @@ return new class extends Migration
             $table->text('details');
             $table->date('start_date');
             $table->date('end_date')->nullable();
-            $table->date('end_date')->nullable();
             $table->string('target_population')->nullable();
             $table->timestamps();
         });

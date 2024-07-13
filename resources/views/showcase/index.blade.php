@@ -212,269 +212,29 @@
 
         <div class="row gy-4">
 
-          <div class="col-lg-4 col-md-6">
-            <article class="py-3">
-
-              <div class="post-img">
-                <img src="{{ asset('assets') }}/img/blog/blog-1.jpg" alt="" class="img-fluid">
-              </div>
-
-              <h2 class="h6">
-                <a href="blog-details.html"><b>Dolorum optio tempore voluptas dignissimos</b></a>
-              </h2>
-
-              <div class="caption line-clamp-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, et animi voluptates delectus autem ipsam vel distinctio nam molestiae dolore temporibus, vitae fugiat iusto iste, quidem labore libero quae? Ut?
-              </div>
-
-              <div class="d-flex my-3 justify-content-center">
-                <a href="#" class="btn btn-circle btn-default border py-2 px-5" style=""><b>more</b></a>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4 col-md-6">
-            <article class="py-3">
-
-              <div class="post-img">
-                <img src="{{ asset('assets') }}/img/blog/blog-1.jpg" alt="" class="img-fluid">
-              </div>
-
-              <h2 class="h6">
-                <a href="blog-details.html"><b>Dolorum optio tempore voluptas dignissimos</b></a>
-              </h2>
-
-              <div class="caption line-clamp-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, et animi voluptates delectus autem ipsam vel distinctio nam molestiae dolore temporibus, vitae fugiat iusto iste, quidem labore libero quae? Ut?
-              </div>
-
-              <div class="d-flex my-3 justify-content-center">
-                <a href="#" class="btn btn-circle btn-default border py-2 px-5" style=""><b>more</b></a>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4 col-md-6">
-            <article class="py-3">
-
-              <div class="post-img">
-                <img src="{{ asset('assets') }}/img/blog/blog-1.jpg" alt="" class="img-fluid">
-              </div>
-
-              <h2 class="h6">
-                <a href="blog-details.html"><b>Dolorum optio tempore voluptas dignissimos</b></a>
-              </h2>
-
-              <div class="caption line-clamp-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, et animi voluptates delectus autem ipsam vel distinctio nam molestiae dolore temporibus, vitae fugiat iusto iste, quidem labore libero quae? Ut?
-              </div>
-
-              <div class="d-flex my-3 justify-content-center">
-                <a href="#" class="btn btn-circle btn-default border py-2 px-5" style=""><b>more</b></a>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4 col-md-6">
-            <article class="py-3">
-
-              <div class="post-img">
-                <img src="{{ asset('assets') }}/img/blog/blog-1.jpg" alt="" class="img-fluid">
-              </div>
-
-              <h2 class="h6">
-                <a href="blog-details.html"><b>Dolorum optio tempore voluptas dignissimos</b></a>
-              </h2>
-
-              <div class="caption line-clamp-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, et animi voluptates delectus autem ipsam vel distinctio nam molestiae dolore temporibus, vitae fugiat iusto iste, quidem labore libero quae? Ut?
-              </div>
-
-              <div class="d-flex my-3 justify-content-center">
-                <a href="#" class="btn btn-circle btn-default border py-2 px-5" style=""><b>more</b></a>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4 col-md-6">
-            <article class="py-3">
-
-              <div class="post-img">
-                <img src="{{ asset('assets') }}/img/blog/blog-1.jpg" alt="" class="img-fluid">
-              </div>
-
-              <h2 class="h6">
-                <a href="blog-details.html"><b>Dolorum optio tempore voluptas dignissimos</b></a>
-              </h2>
-
-              <div class="caption line-clamp-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, et animi voluptates delectus autem ipsam vel distinctio nam molestiae dolore temporibus, vitae fugiat iusto iste, quidem labore libero quae? Ut?
-              </div>
-
-              <div class="d-flex my-3 justify-content-center">
-                <a href="#" class="btn btn-circle btn-default border py-2 px-5" style=""><b>more</b></a>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4 col-md-6">
-            <article class="py-3">
-
-              <div class="post-img">
-                <img src="{{ asset('assets') }}/img/blog/blog-1.jpg" alt="" class="img-fluid">
-              </div>
-
-              <h2 class="h6">
-                <a href="blog-details.html"><b>Dolorum optio tempore voluptas dignissimos</b></a>
-              </h2>
-
-              <div class="caption line-clamp-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, et animi voluptates delectus autem ipsam vel distinctio nam molestiae dolore temporibus, vitae fugiat iusto iste, quidem labore libero quae? Ut?
-              </div>
-
-              <div class="d-flex my-3 justify-content-center">
-                <a href="#" class="btn btn-circle btn-default border py-2 px-5" style=""><b>more</b></a>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4 col-md-6">
-            <article class="py-3">
-
-              <div class="post-img">
-                <img src="{{ asset('assets') }}/img/blog/blog-1.jpg" alt="" class="img-fluid">
-              </div>
-
-              <h2 class="h6">
-                <a href="blog-details.html"><b>Dolorum optio tempore voluptas dignissimos</b></a>
-              </h2>
-
-              <div class="caption line-clamp-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, et animi voluptates delectus autem ipsam vel distinctio nam molestiae dolore temporibus, vitae fugiat iusto iste, quidem labore libero quae? Ut?
-              </div>
-
-              <div class="d-flex my-3 justify-content-center">
-                <a href="#" class="btn btn-circle btn-default border py-2 px-5" style=""><b>more</b></a>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4 col-md-6">
-            <article class="py-3">
-
-              <div class="post-img">
-                <img src="{{ asset('assets') }}/img/blog/blog-1.jpg" alt="" class="img-fluid">
-              </div>
-
-              <h2 class="h6">
-                <a href="blog-details.html"><b>Dolorum optio tempore voluptas dignissimos</b></a>
-              </h2>
-
-              <div class="caption line-clamp-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, et animi voluptates delectus autem ipsam vel distinctio nam molestiae dolore temporibus, vitae fugiat iusto iste, quidem labore libero quae? Ut?
-              </div>
-
-              <div class="d-flex my-3 justify-content-center">
-                <a href="#" class="btn btn-circle btn-default border py-2 px-5" style=""><b>more</b></a>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4 col-md-6">
-            <article class="py-3">
-
-              <div class="post-img">
-                <img src="{{ asset('assets') }}/img/blog/blog-1.jpg" alt="" class="img-fluid">
-              </div>
-
-              <h2 class="h6">
-                <a href="blog-details.html"><b>Dolorum optio tempore voluptas dignissimos</b></a>
-              </h2>
-
-              <div class="caption line-clamp-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, et animi voluptates delectus autem ipsam vel distinctio nam molestiae dolore temporibus, vitae fugiat iusto iste, quidem labore libero quae? Ut?
-              </div>
-
-              <div class="d-flex my-3 justify-content-center">
-                <a href="#" class="btn btn-circle btn-default border py-2 px-5" style=""><b>more</b></a>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4 col-md-6">
-            <article class="py-3">
-
-              <div class="post-img">
-                <img src="{{ asset('assets') }}/img/blog/blog-1.jpg" alt="" class="img-fluid">
-              </div>
-
-              <h2 class="h6">
-                <a href="blog-details.html"><b>Dolorum optio tempore voluptas dignissimos</b></a>
-              </h2>
-
-              <div class="caption line-clamp-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, et animi voluptates delectus autem ipsam vel distinctio nam molestiae dolore temporibus, vitae fugiat iusto iste, quidem labore libero quae? Ut?
-              </div>
-
-              <div class="d-flex my-3 justify-content-center">
-                <a href="#" class="btn btn-circle btn-default border py-2 px-5" style=""><b>more</b></a>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4 col-md-6">
-            <article class="py-3">
-
-              <div class="post-img">
-                <img src="{{ asset('assets') }}/img/blog/blog-1.jpg" alt="" class="img-fluid">
-              </div>
-
-              <h2 class="h6">
-                <a href="blog-details.html"><b>Dolorum optio tempore voluptas dignissimos</b></a>
-              </h2>
-
-              <div class="caption line-clamp-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, et animi voluptates delectus autem ipsam vel distinctio nam molestiae dolore temporibus, vitae fugiat iusto iste, quidem labore libero quae? Ut?
-              </div>
-
-              <div class="d-flex my-3 justify-content-center">
-                <a href="#" class="btn btn-circle btn-default border py-2 px-5" style=""><b>more</b></a>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4 col-md-6">
-            <article class="py-3">
-
-              <div class="post-img">
-                <img src="{{ asset('assets') }}/img/blog/blog-1.jpg" alt="" class="img-fluid">
-              </div>
-
-              <h2 class="h6">
-                <a href="blog-details.html"><b>Dolorum optio tempore voluptas dignissimos</b></a>
-              </h2>
-
-              <div class="caption line-clamp-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, et animi voluptates delectus autem ipsam vel distinctio nam molestiae dolore temporibus, vitae fugiat iusto iste, quidem labore libero quae? Ut?
-              </div>
-
-              <div class="d-flex my-3 justify-content-center">
-                <a href="#" class="btn btn-circle btn-default border py-2 px-5" style=""><b>more</b></a>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
+          @for($i = 0; $i < 12; $i++)
+            <div class="col-lg-4 col-md-6">
+              <article class="py-3">
+
+                <div class="post-img">
+                  <img src="{{ asset('assets') }}/img/blog/blog-1.jpg" alt="" class="img-fluid">
+                </div>
+
+                <h2 class="h6">
+                  <a href="{{ route('admin.projects.index', ['id'=>1]) }}"><b>Dolorum optio tempore voluptas dignissimos</b></a>
+                </h2>
+
+                <div class="caption line-clamp-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, et animi voluptates delectus autem ipsam vel distinctio nam molestiae dolore temporibus, vitae fugiat iusto iste, quidem labore libero quae? Ut?
+                </div>
+
+                <div class="d-flex my-3 justify-content-center">
+                  <a href="{{ route('admin.projects.index', ['id'=>1]) }}" class="btn btn-circle btn-default border py-2 px-5" style=""><b>more</b></a>
+                </div>
+
+              </article>
+            </div><!-- End post list item -->
+          @endfor
 
         </div><!-- End recent posts list -->
 
@@ -487,7 +247,7 @@
 
         <div class="section-header">
           <h2>Nos Projets</h2>
-          <p>Voluptatem quibusdam ut ullam perferendis repellat non ut consequuntur est eveniet deleniti fignissimos eos quam</p>
+          <p><b class="h5">Explorez Nos Projets :</b> Découvrez la diversité des projets que nous avons réalisés avec succès, mettant en valeur notre expertise en Génie Civil, Construction Métallique, Réparations Navales et bien plus encore. Chaque projet reflète notre engagement envers l'innovation, la qualité et la satisfaction de nos clients. Des structures industrielles à l'ingénierie de précision, nous donnons vie à chaque vision avec excellence.</p>
         </div>
 
         <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
@@ -717,34 +477,55 @@
 
           <div class="col-lg-4">
             <div class="pricing-item featured">
-              <h3>Our Mission</h3>
+              <h3>QUALITÉ</h3>
               <div class="icon">
                 <i class="bi bi-snow"></i>
               </div>
 
-              <div class="text-center heading"><b>Constructing a sustainable future by delivering excellence in every project, fostering innovation, embracing diversity, and prioritizing safety, quality, and client satisfaction</b></div>
-              {{-- <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div> --}}
+              <div class="text-center">
+                <ul>
+                  <li><i class="bi bi-check-circle-fill"></i>Accroître notre réactivité face aux demandes de nos clients</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Améliorer la qualité de nos produits et de nos services</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Développer les compétences de nos employés</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Répondre aux attentes de nos clients par une prestation de qualité ainsi qu’une écoute et une disponibilité à tous les instants</li>
+                </ul>
+              </div>
             </div>
           </div><!-- End Pricing Item -->
           
           <div class="col-lg-4">
             <div class="pricing-item">
-              <h3>Our Motto</h3>
+              <h3>SÉCURITÉ ET SANTÉ</h3>
               <div class="icon">
                 <i class="bi bi-star"></i>
               </div>
-              <div class="text-center h2"><b>Building Dreams, Crafting Legacies</b></div>
+              <div class="text-center">
+                <ul>
+                  <li><i class="bi bi-check-circle-fill"></i>Tendre vers le « Zéro Accident »</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Port obligatoire des EPI (Équipements de Protection Individuelle)</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Prévenir les maladies professionnelles</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Réduire les risques aux postes de travail</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Prévenir les crises majeures</li>
+                </ul>
+              </div>
               {{-- <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div> --}}
             </div>
           </div><!-- End Pricing Item -->
 
           <div class="col-lg-4">
             <div class="pricing-item featured">
-              <h3>Our Vision</h3>
+              <h3>ENVIRONNEMENT</h3>
               <div class="icon">
                 <i class="bi bi-trophy"></i>
               </div>
-              <div class="text-center heading"><b>Pioneering sustainable practices, and leaving a lasting legacy of craftsmanship and innovation that inspires generations to come</b></div>
+              <div class="text-center">
+                <ul>
+                  <li><i class="bi bi-check-circle-fill"></i>Prévenir les impacts environnementaux</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Réduire nos déchets et améliorer leur valorisation</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Optimiser notre utilisation des ressources naturelles</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Garantir la gestion et la provenance de toutes les substances</li>
+                </ul>
+              </div>
               {{-- <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div> --}}
             </div>
           </div><!-- End Pricing Item -->
@@ -760,7 +541,7 @@
 
         <div class="section-header">
           <h2>Portfolio</h2>
-          <p>Quam sed id excepturi ccusantium dolorem ut quis dolores nisi llum nostrum enim velit qui ut et autem uia reprehenderit sunt deleniti</p>
+          <p>Parcourez notre portefeuille pour découvrir l'étendue de notre travail et l'impact que nous avons eu dans divers secteurs. Des réalisations révolutionnaires en génie civil aux constructions mécaniques avancées, chaque projet raconte une histoire de dévouement, d'innovation et d'un savoir-faire inégalé. Découvrez comment nous transformons les idées en réalité avec précision et passion.</p>
         </div>
 
         <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">

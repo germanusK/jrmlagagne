@@ -11,14 +11,14 @@
             <div class="card info-card sales-card">
 
               <div class="card-body">
-                <h5 class="card-title">Sales</h5>
+                <h5 class="card-title">Services</h5>
 
                 <div class="d-flex align-items-center">
                   <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                    <i class="bi bi-cart"></i>
+                    <i class="bi bi-hash"></i>
                   </div>
                   <div class="ps-3">
-                    <h6>145</h6>
+                    <h6>{{ $service_count??0 }}</h6>
                     <span class="text-muted small pt-2 ps-1">total</span>
 
                   </div>
@@ -37,10 +37,10 @@
 
                 <div class="d-flex align-items-center">
                   <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                    <i class="bi bi-currency-dollar"></i>
+                    <i class="bi bi-hash"></i>
                   </div>
                   <div class="ps-3">
-                    <h6>$3,264</h6>
+                    <h6>{{ $project_count??0 }}</h6>
                     <span class="text-muted small pt-2 ps-1">total</span>
 
                   </div>
@@ -59,10 +59,10 @@
 
                 <div class="d-flex align-items-center">
                   <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                    <i class="bi bi-people"></i>
+                    <i class="bi bi-hash"></i>
                   </div>
                   <div class="ps-3">
-                    <h6>1244</h6>
+                    <h6>{{ $property_count??0 }}</h6>
                     <span class="text-muted small pt-2 ps-1">total</span>
 
                   </div>

@@ -27,6 +27,13 @@ class HomeController extends Controller
     }
     //
     public function save_public_data(Request $request, $id=null){
-        
+        if(count($request->all()) > 0){
+            $data = PublicData::first();
+            if($data != null)
+                $data->update($request->all());
+            else
+                PublicData::create($request->all());
+        }
+        return back()->with('success', 'Done');
     }
 }
