@@ -16,8 +16,8 @@
           <h2 class="text-center">Bienvenue chez <br><span>JRM LAGAGNE CONSTRUCTION</span></h2>
           <p style="font-size:2rem !important;">{{ $showcase_variables->business_slogan ?? "La solidité de notre construction, votre tranquillité d'esprit" }}</p>
           <div class="d-flex justify-content-center py-5">
-            <a href="#services" class="btn-get-started">Get Started</a>
-            <a href="{{ $showcase_variables->hero_video_link ?? 'https://www.youtube.com/watch?v=LXb3EKWsInQ' }}" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+            <a href="#services" class="btn-get-started">Commencer</a>
+            <a href="{{ $showcase_variables->hero_video_link ?? 'https://www.youtube.com/watch?v=LXb3EKWsInQ' }}" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Regarder la Vidéo</span></a>
           </div>
         </div>
       </div>
@@ -154,14 +154,10 @@
     <!-- ======= Call To Action Section ======= -->
     <section id="call-to-action" class="call-to-action">
       <div class="container text-center shadow" data-aos="zoom-out">
-        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
+        <a href="" class="play-btn"></a>
         <h3 class="text-capitalize">Visitez notre chaîne</h3>
         <p>Explorez notre contenu exclusif en visitant notre chaîne. Découvrez des vidéos captivantes, <br> des conseils utiles et bien plus encore. Abonnez-vous pour ne rien manquer de nos mises à jour régulières <br> et rejoignez notre communauté dès aujourd'hui</p>
         <a class="cta-btn text-capitalize" href="#">Avancez d'un pas</a>
-        {{-- <video autoplay loop muted class="position-absolute w-100 h-100" style="left: 0; top: 0; z-index: -10;">
-          <source src="{{ asset('assets/videos/short_video.mp4') }}" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video> --}}
       </div>
     </section><!-- End Call To Action Section -->
 
@@ -173,7 +169,7 @@
 
           <div class="col-lg-6">
             <div class="mx-auto" style="">
-              <img src="{{ asset('assets/img/project_image2.jpg') }}" alt="" class="img-fluid">
+              <img src="{{ asset('assets/img/stats.jpg') }}" alt="" class="img-fluid">
             </div>
           </div>
 

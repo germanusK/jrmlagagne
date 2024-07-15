@@ -20,7 +20,7 @@
 :root {
   --color-default: #222222;
   --color-primary: rgb(20, 18, 54);
-  --color-primary-transparent: rgba(20, 18, 54, 0.8);
+  --color-primary-transparent: rgba(0, 0, 0, 0.95);
   --color-secondary: #1f1a6e;
 }
 
@@ -70,7 +70,7 @@ section {
 }
 
 .sections-bg {
-  background-color: #f6f6f6;
+  background-color: #f1f5ff;
 }
 
 .section-header {
@@ -848,22 +848,26 @@ section {
 # Call To Action Section
 --------------------------------------------------------------*/
 .call-to-action .container {
-  /* background: linear-gradient( rgba(4, 88, 245, 0.7), rgba(7, 1, 54, 0.7)); */
+  background-image: url('./../img/roof-design.jpg');
+  background-color: #000;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   padding: 70px 60px;
   border-radius: 15px;
   overflow: hidden;
 }
 
 .call-to-action h3 {
-  color: var(--color-secondary);
+  color: white;
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
 .call-to-action p {
-  color: var(--color-default);
+  color: whitesmoke;
   font-size: large;
   margin-bottom: 20px;
 }
