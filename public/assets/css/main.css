@@ -18,10 +18,10 @@
 
 /* Colors */
 :root {
-  --color-default: #222222;
-  --color-primary: rgb(20, 18, 54);
+  --color-default: #232323;
+  --color-primary: rgb(22, 19, 95);
   --color-primary-transparent: rgba(0, 0, 0, 0.95);
-  --color-secondary: #1f1a6e;
+  --color-secondary: #5348e0;
 }
 
 /* Smooth scroll behavior */
@@ -1009,7 +1009,6 @@ section {
   content: "";
   height: 100%;
   width: 100%;
-  background: #eeeeee;
   border-radius: 50px;
   z-index: 1;
   top: 10px;
@@ -2020,7 +2019,7 @@ section {
   padding: 60px 30px;
   position: relative;
   overflow: hidden;
-  background: var(--color-primary);
+  background: var(--color-secondary);
   box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
@@ -2742,4 +2741,8 @@ EXTRA/GENERAL CSS
   -webkit-box-orient: vertical;  
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.bg-service{
+  background-color: #cfd9fa;
 }

@@ -22,10 +22,11 @@ Route::get('/projects/{service_slug?}', [Controller::class, 'projects'])->name('
 Route::get('/about', [Controller::class, 'about'])->name('public.about');
 Route::get('/contact', [Controller::class, 'contact'])->name('public.contact');
 Route::get('/login', [Controller::class, 'login'])->name('public.login');
+Route::post('/login', [Controller::class, 'authenticate']);
 Route::get('/logout', [Controller::class, 'logout'])->name('public.logout');
 
 
-Route::prefix('admin')->name('admin.')->group(function(){
+Route::prefix('admin')->name('admin.')->middleware('admin')->group(function(){
     Route::get('home', [Admin\HomeController::class, 'home'])->name('home');
     // 
     Route::get('services/editor/{id?}', [Admin\ServiceController::class, 'editor'])->name('services.editor');

@@ -81,7 +81,7 @@
         <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
 
           <div class="col-lg-4 col-md-6">
-            <div class="service-item position-relative card border-0 bg-white shadow">
+            <div class="service-item position-relative card border-0 bg-service shadow-sm">
               <div class="icon text">
                 <i class="bi bi-bricks"></i>
               </div>
