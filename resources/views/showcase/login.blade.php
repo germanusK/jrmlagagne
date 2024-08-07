@@ -46,6 +46,7 @@
         <div class="col-md-6 col-xl-4 card border-0 shadow border-bottom border-top border-3 border-warning">
             <div class="card-body px-4">
                 <form method="post">
+                    @csrf
                     <div class="text-center text-success text-uppercase py-3 border-bottom h4"><b>admin login</b></div>
                     <div class="py-3 mt-5">
                         <input type="text" class="form-control rounded" name="username" required>
@@ -56,7 +57,6 @@
                     <div class="py-3 mb-5">
                         <button type="submit" class="form-control btn btn-outline-success btn-md rounded text-center text-uppercase">login</button>
                     </div>
-                    
                 </form>
             </div>
         </div>

@@ -18,10 +18,10 @@
 
 /* Colors */
 :root {
-  --color-default: #222222;
-  --color-primary: rgb(20, 18, 54);
-  --color-primary-transparent: rgba(0, 0, 0, 0.95);
-  --color-secondary: #1f1a6e;
+  --color-default: #232323;
+  --color-primary: rgb(0, 0, 0);
+  --color-primary-transparent: rgba(0, 0, 0, 0.7);
+  --color-secondary: #5348e0;
 }
 
 /* Smooth scroll behavior */
@@ -70,7 +70,7 @@ section {
 }
 
 .sections-bg {
-  background-color: #f1f5ff;
+  background-color: #000;
 }
 
 .section-header {
@@ -816,7 +816,7 @@ section {
 
 .stats-counter .stats-item {
   padding: 20px 0;
-  border-bottom: 1px solid #e4e4e4;
+  border-bottom: 1px solid #464545;
 }
 
 .stats-counter .stats-item .purecounter {
@@ -834,13 +834,14 @@ section {
   font-size: 40px;
   display: block;
   font-weight: 700;
-  color: var(--color-primary);
+  color: white;
   line-height: 40px;
 }
 
 .stats-counter .stats-item p {
   margin: 0;
   font-family: var(--font-primary);
+  color: whitesmoke;
   font-size: 14px;
 }
 
@@ -848,8 +849,8 @@ section {
 # Call To Action Section
 --------------------------------------------------------------*/
 .call-to-action .container {
-  background-image: url('./../img/roof-design.jpg');
-  background-color: #000;
+  background-image: url('./../img/cta-bg-craft.jpg');
+  background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-size: cover;
@@ -997,7 +998,7 @@ section {
 }
 
 .services .service-item .icon i {
-  color: var(--color-secondary);
+  color: #015f96;
   font-size: 56px;
   transition: ease-in-out 0.3s;
   z-index: 2;
@@ -1009,7 +1010,6 @@ section {
   content: "";
   height: 100%;
   width: 100%;
-  background: #eeeeee;
   border-radius: 50px;
   z-index: 1;
   top: 10px;
@@ -1486,7 +1486,7 @@ section {
 .pricing .pricing-item {
   padding: 60px 40px;
   box-shadow: 0 3px 20px -2px rgba(108, 117, 125, 0.15);
-  background: #fff;
+  background: var(--color-default);
   height: 100%;
   position: relative;
   border-radius: 15px;
@@ -1504,7 +1504,7 @@ section {
   margin: 30px auto 30px auto;
   width: 70px;
   height: 70px;
-  background: var(--color-primary);
+  background: var(--color-secondary);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1576,7 +1576,7 @@ section {
 }
 
 .pricing ul i {
-  color: var(--color-primary);
+  color: var(--color-secondary);
   font-size: 24px;
   padding-right: 3px;
 }
@@ -1960,7 +1960,7 @@ section {
   border-radius: 50px;
   transition: 0.3s;
   color: #fff;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--color-secondary);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
   border: 2px solid rgba(255, 255, 255, 0.1);
 }
@@ -1978,7 +1978,7 @@ section {
 }
 
 .hero .btn-watch-video i {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color-secondary);
   font-size: 32px;
   transition: 0.3s;
   line-height: 0;
@@ -2020,7 +2020,7 @@ section {
   padding: 60px 30px;
   position: relative;
   overflow: hidden;
-  background: var(--color-primary);
+  background: var(--color-secondary);
   box-shadow: 0 0 29px 0 rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
@@ -2742,4 +2742,8 @@ EXTRA/GENERAL CSS
   -webkit-box-orient: vertical;  
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.bg-service{
+  background-color: #bbc7f1;
 }
