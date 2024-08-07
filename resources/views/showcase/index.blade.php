@@ -79,126 +79,29 @@
         </div>
 
         <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="service-item position-relative card border-0 bg-service shadow-sm">
-              <div class="icon text">
-                <i class="bi bi-bricks"></i>
+          @foreach ($services as $service)
+            <div class="col-lg-4 col-md-6">
+              <div class="service-item position-relative card border-0 bg-service shadow-sm">
+                  @if($service->featured_image == null)
+                    <div class="icon text mx-auto">
+                      <i class="bi bi-bricks"></i>
+                    </div>
+                  @else
+                    <img class="img img-fluid" style="height: 12rem;" src="{{ $service->featured_image }}">  
+                  @endif
+                <h3>{{ $service->title }}</h3>
+                <p class="line-clamp-4"> {!! $service->caption !!}</p>
+                <a href="{{ route('public.service', $service->id) }}" class="readmore stretched-link">En savoir plus <i class="bi bi-arrow-right"></i></a>
               </div>
-              <h3>Génie maritime</h3>
-              <p class="line-clamp-4"> construction navale, mécanique navale, sécurité et sûreté des installations portuaires, prestations maritimes et portuaires</p>
-              <a href="#" class="readmore stretched-link">En savoir plus <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6">
-            <div class="service-item position-relative card border-0 bg-white shadow">
-              <div class="icon text">
-                <i class="bi bi-flag"></i>
-              </div>
-              <h3>Genie civil</h3>
-              <p class="line-clamp-4">Étude et conception, maisons individuelles, bâtiments et infrastructures industriels, rénovation, travaux publics</p>
-              <a href="#" class="readmore stretched-link">En savoir plus <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6">
-            <div class="service-item position-relative card border-0 bg-white shadow">
-              <div class="icon text">
-                <i class="bi bi-boxes"></i>
-              </div>
-              <h3>Architecture</h3>
-              <p class="line-clamp-4">Plans architecturaux, design intérieur et extérieur, décoration des murs verticaux ( laquage, peinture, carrelage, lambris...), Décoration des murs horizontaux ( Staff, placo, lambris, faux plafond)</p>
-              <a href="#" class="readmore stretched-link">En savoir plus <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6">
-            <div class="service-item position-relative card border-0 bg-white shadow">
-              <div class="icon text">
-                <i class="bi bi-cpu"></i>
-              </div>
-              <h3>Ingénierie</h3>
-              <p class="line-clamp-4">Étude et conception, dimensionnement, élaboration des techniques de soudage et des méthodologies de fabrication, construction mécanique</p>
-              <a href="#" class="readmore stretched-link">En savoir plus <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6">
-            <div class="service-item position-relative card border-0 bg-white shadow">
-              <div class="icon text">
-                <i class="bi bi-map"></i>
-              </div>
-              <h3>Immobilier</h3>
-              <p class="line-clamp-4">Travaux de topographie, achat et vente de terrains, achat et vente des maisons, immatriculation</p>
-              <a href="#" class="readmore stretched-link">En savoir plus <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6">
-            <div class="service-item position-relative card border-0 bg-white shadow">
-              <div class="icon text">
-                <i class="bi bi-recycle"></i>
-              </div>
-              <h3>Recyclage de la matière plastique</h3>
-              <p class="line-clamp-4">fabrication des pavés, des sceaux, des bols</p>
-              <a href="#" class="readmore stretched-link">En savoir plus <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div><!-- End Service Item -->
-
+            </div><!-- End Service Item -->
+          @endforeach
         </div>
 
       </div>
     </section><!-- End Our Services Section -->
 
-    <!-- ======= Call To Action Section ======= -->
-    <section id="call-to-action" class="call-to-action">
-      <div class="container text-center shadow" data-aos="zoom-out">
-        <a href="" class="play-btn"></a>
-        <h3 class="text-capitalize">Visitez notre chaîne</h3>
-        <p>Explorez notre contenu exclusif en visitant notre chaîne. Découvrez des vidéos captivantes, <br> des conseils utiles et bien plus encore. Abonnez-vous pour ne rien manquer de nos mises à jour régulières <br> et rejoignez notre communauté dès aujourd'hui</p>
-        <a class="cta-btn text-capitalize" href="#">Avancez d'un pas</a>
-      </div>
-    </section><!-- End Call To Action Section -->
-
-    <!-- ======= Stats Counter Section ======= -->
-    <section id="stats-counter" class="stats-counter my-5">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row gy-4 align-items-center">
-
-          <div class="col-lg-6">
-            <div class="mx-auto" style="">
-              <img src="{{ asset('assets/img/stats.jpg') }}" alt="" class="img-fluid">
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-
-            <div class="stats-item d-flex align-items-center">
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Clients Satisfaits</strong> Transformer les rêves en solutions, en conservant vos sourires</p>
-            </div><!-- End Stats Item -->
-
-            <div class="stats-item d-flex align-items-center">
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Projets Exécutés</strong> Écrivant l'histoire au fur et à mesure de notre avancée</p>
-            </div><!-- End Stats Item -->
-
-            <div class="stats-item d-flex align-items-center">
-              <span data-purecounter-start="0" data-purecounter-end="11" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Années de Travail</strong> au service du grand public</p>
-            </div><!-- End Stats Item -->
-
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Stats Counter Section -->
-    
     <!-- ======= Recent Works Section ======= -->
-    <section id="recent-posts" class="recent-posts sections-bg">
+    <section id="recent-posts" class="recent-posts">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
@@ -387,6 +290,52 @@
       </div>
     </section><!-- End Testimonials Section -->
 
+    <!-- ======= Call To Action Section ======= -->
+    <section id="call-to-action" class="call-to-action sections-bg">
+      <div class="container text-center shadow" data-aos="zoom-out">
+        <a href="" class="play-btn"></a>
+        <h3 class="text-capitalize">Visitez notre chaîne</h3>
+        <p>Explorez notre contenu exclusif en visitant notre chaîne. Découvrez des vidéos captivantes, <br> des conseils utiles et bien plus encore. Abonnez-vous pour ne rien manquer de nos mises à jour régulières <br> et rejoignez notre communauté dès aujourd'hui</p>
+        <a class="cta-btn text-capitalize" href="#">Avancez d'un pas</a>
+      </div>
+    </section><!-- End Call To Action Section -->
+
+    <!-- ======= Stats Counter Section ======= -->
+    <section id="stats-counter" class="stats-counter py-5 sections-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4 align-items-center">
+
+          <div class="col-lg-6">
+            <div class="mx-auto" style="">
+              <img src="{{ asset('assets/img/stats-bg.webp') }}" alt="" class="img-fluid">
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Clients Satisfaits</strong> Transformer les rêves en solutions, en conservant vos sourires</p>
+            </div><!-- End Stats Item -->
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Projets Exécutés</strong> Écrivant l'histoire au fur et à mesure de notre avancée</p>
+            </div><!-- End Stats Item -->
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="11" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Années de Travail</strong> au service du grand public</p>
+            </div><!-- End Stats Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Stats Counter Section -->
+    
     {{-- 
     <!-- ======= Our Team Section ======= -->
     <section id="team" class="team">
@@ -461,7 +410,7 @@
     </section><!-- End Our Team Section --> --}}
 
     <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing">
+    <section id="pricing" class="pricing sections-bg">
       <div class="container" data-aos="fade-up">
 
         {{-- <div class="section-header">
@@ -532,7 +481,7 @@
     </section><!-- End Pricing Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio sections-bg">
+    <section id="portfolio" class="portfolio">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">

@@ -96,7 +96,7 @@
     </main>
     
     <!-- ======= Footer ======= -->
-    <footer id="footer" class="footer">
+    <footer id="footer" class="footer border-top">
 
         <div class="container">
         <div class="row gy-4">

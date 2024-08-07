@@ -2,6 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Project;
+use App\Models\ProjectImage;
+use App\Models\Service;
+use App\Models\ServiceImage;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -16,7 +21,13 @@ class Controller extends BaseController
     public function index()
     {
         # code...
-        return view('showcase.index');
+        $data['services'] = Service::inRandomOrder()->get();
+        $data['recent_works'] = Project::orderBy('id', 'DESC')->take(12)->get();
+        $data['projects'] = Project::inRandomOrder()->take(12)->get();
+        $project_images = ProjectImage::orderBy('id', 'desc')->take(18)->get();
+        $service_images = ServiceImage::orderBy('id', 'desc')->take(18)->get();
+        $data['gallery'] = $project_images->merge($service_images)->shuffle();
+        return view('showcase.index', $data);
     }
 
     public function contact()
@@ -34,19 +45,24 @@ class Controller extends BaseController
     public function projects($service_slug = null)
     {
         # code...
-        return view('showcase.projects');
+        $data['projects'] = $service_slug == null ?
+            Project::orderBy('id', 'DESC')->paginate(36) :
+            Project::where(['service_id'=>$service_slug])->orderBy('id', 'DESC')->paginate(36) ;
+        return view('showcase.projects', $data);
     }
 
     public function project_details($project_slug)
     {
         # code...
-        return view('showcase.project_details');
+        $data['project'] = Project::find($project_slug);
+        return view('showcase.project_details', $data);
     }
 
     public function service_details($service_slug)
     {
         # code...
-        return view('showcase.service_details');
+        $data['service'] = Service::find($service_slug);
+        return view('showcase.service_details', $data);
     }
 
     public function login()
