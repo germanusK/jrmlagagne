@@ -111,29 +111,53 @@
 
         <div class="row gy-4">
 
-          @for($i = 0; $i < 12; $i++)
+          @forelse ($recent_works as $item)
             <div class="col-lg-4 col-md-6">
               <article class="py-3">
 
                 <div class="post-img">
-                  <img src="{{ asset('assets') }}/img/blog/blog-1.jpg" alt="" class="img-fluid">
+                  <img src="{{ $item->featured_image != null ? $item->featured_image : asset('assets') }}/img/cta-bg-craft.jpg" alt="" class="img-fluid">
                 </div>
 
                 <h2 class="h6">
-                  <a href="{{ route('admin.projects.index', ['id'=>1]) }}"><b>Dolorum optio tempore voluptas dignissimos</b></a>
+                  <a href="{{ route('admin.projects.index', $item->id) }}"><b>{{$item->title}}</b><i class="text-info">{{$item->service->title??''}}</i></a>
+                  <br><small class="text-secondary">{{ $item->start_date->format('M dS Y') }}</small>
                 </h2>
 
-                <div class="caption line-clamp-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, et animi voluptates delectus autem ipsam vel distinctio nam molestiae dolore temporibus, vitae fugiat iusto iste, quidem labore libero quae? Ut?
-                </div>
-
-                <div class="d-flex my-3 justify-content-center">
-                  <a href="{{ route('admin.projects.index', ['id'=>1]) }}" class="btn btn-circle btn-default border py-2 px-5" style=""><b>more</b></a>
+                <div class="card">
+                  <div class="card-body ">
+                    <p class="line-clamp-4">{{ $item->caption??'' }}</p>
+                  </div>
                 </div>
 
               </article>
             </div><!-- End post list item -->
-          @endfor
+            
+            @empty
+              @for($i = 0; $i < 12; $i++)
+                <div class="col-lg-4 col-md-6">
+                  <article class="py-3">
+    
+                    <div class="post-img">
+                      <img src="{{ asset('assets') }}/img/blog/blog-1.jpg" alt="" class="img-fluid">
+                    </div>
+    
+                    <h2 class="h6">
+                      <a href="{{ route('admin.projects.index', ['id'=>1]) }}"><b>Dolorum optio tempore voluptas dignissimos</b></a>
+                    </h2>
+    
+                    <div class="caption line-clamp-4">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, et animi voluptates delectus autem ipsam vel distinctio nam molestiae dolore temporibus, vitae fugiat iusto iste, quidem labore libero quae? Ut?
+                    </div>
+    
+                    <div class="d-flex my-3 justify-content-center">
+                      <a href="{{ route('admin.projects.index', ['id'=>1]) }}" class="btn btn-circle btn-default border py-2 px-5" style=""><b>more</b></a>
+                    </div>
+    
+                  </article>
+                </div><!-- End post list item -->
+              @endfor
+            @endforelse
 
         </div><!-- End recent posts list -->
 
@@ -151,138 +175,38 @@
 
         <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
           <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item team">
-                  <div class="member">
-                    <img src="{{ asset('assets/img/bg2.jpg') }}" class="img-fluid" alt="">
-                    <h6 class="my-2" style="color:darkslategray;"><b>Project name or Service type</b></h6>
-                    <div class="caption line-clamp-4">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
+            @forelse ($projects as $project)
+              <div class="swiper-slide">
+                <div class="testimonial-wrap">
+                  <div class="testimonial-item team">
+                    <div class="member">
+                      <img src="{{ $project->featured_image == null ? asset('assets/img/about.jpg') : $project->featured_image}}" class="img-fluid" alt="">
+                      <h6 class="my-2" style="color:rgb(0, 0, 0);"><b>{{$project->title}}</b><i class="text-primary mx-2">{{$project->service->title??''}}</i><br><small class="text-secondary">{{$project->start_date->format('M dS Y')}}</small></h6>
+                      <div class="p-2 shadow-sm rounded">
+                        <p class=" line-clamp-4">{{$project->caption??''}}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item team">
-                  <div class="member">
-                    <img src="{{ asset('assets/img/bg2.jpg') }}" class="img-fluid" alt="">
-                    <h6 class="my-2" style="color:darkslategray;"><b>Project name or Service type</b></h6>
-                    <div class="caption line-clamp-4">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
+              </div><!-- End testimonial item -->
+            @empty
+              @for($i = 0; $i < 12; $i++)
+                <div class="swiper-slide">
+                  <div class="testimonial-wrap">
+                    <div class="testimonial-item team">
+                      <div class="member">
+                        <img src="{{ asset('assets/img/bg2.jpg') }}" class="img-fluid" alt="">
+                        <h6 class="my-2" style="color:darkslategray;"><b>Project name or Service type</b></h6>
+                        <div class="caption line-clamp-4">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item team">
-                  <div class="member">
-                    <img src="{{ asset('assets/img/bg2.jpg') }}" class="img-fluid" alt="">
-                    <h6 class="my-2" style="color:darkslategray;"><b>Project name or Service type</b></h6>
-                    <div class="caption line-clamp-4">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item team">
-                  <div class="member">
-                    <img src="{{ asset('assets/img/bg2.jpg') }}" class="img-fluid" alt="">
-                    <h6 class="my-2" style="color:darkslategray;"><b>Project name or Service type</b></h6>
-                    <div class="caption line-clamp-4">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item team">
-                  <div class="member">
-                    <img src="{{ asset('assets/img/bg2.jpg') }}" class="img-fluid" alt="">
-                    <h6 class="my-2" style="color:darkslategray;"><b>Project name or Service type</b></h6>
-                    <div class="caption line-clamp-4">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item team">
-                  <div class="member">
-                    <img src="{{ asset('assets/img/bg2.jpg') }}" class="img-fluid" alt="">
-                    <h6 class="my-2" style="color:darkslategray;"><b>Project name or Service type</b></h6>
-                    <div class="caption line-clamp-4">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item team">
-                  <div class="member">
-                    <img src="{{ asset('assets/img/bg2.jpg') }}" class="img-fluid" alt="">
-                    <h6 class="my-2" style="color:darkslategray;"><b>Project name or Service type</b></h6>
-                    <div class="caption line-clamp-4">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item team">
-                  <div class="member">
-                    <img src="{{ asset('assets/img/bg2.jpg') }}" class="img-fluid" alt="">
-                    <h6 class="my-2" style="color:darkslategray;"><b>Project name or Service type</b></h6>
-                    <div class="caption line-clamp-4">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item team">
-                  <div class="member">
-                    <img src="{{ asset('assets/img/bg2.jpg') }}" class="img-fluid" alt="">
-                    <h6 class="my-2" style="color:darkslategray;"><b>Project name or Service type</b></h6>
-                    <div class="caption line-clamp-4">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item team">
-                  <div class="member">
-                    <img src="{{ asset('assets/img/bg2.jpg') }}" class="img-fluid" alt="">
-                    <h6 class="my-2" style="color:darkslategray;"><b>Project name or Service type</b></h6>
-                    <div class="caption line-clamp-4">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sed iure cupiditate possimus modi vel? Cupiditate autem amet impedit quam dicta eos reiciendis dignissimos possimus doloribus quis incidunt, perspiciatis itaque.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
+                </div><!-- End testimonial item -->
+              @endfor
+            @endforelse
+            
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -502,16 +426,29 @@
           </div> --}}
 
           <div class="row gy-4 portfolio-container">
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4>App 1</h4>
-                  <div class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates dicta consequuntur, optio eos quaerat, asperiores, vel pariatur reprehenderit perferendis repellat placeat. Aut corrupti esse, fugiat necessitatibus quis eos a?</div>
+            @forelse ($gallery as $item)
+              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                <div class="portfolio-wrap">
+                  <a href="{{ $item->path }}" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ $item->path }}" class="img-fluid" alt=""></a>
+                  <div class="portfolio-info">
+                    <h4>{{ $item->project == null ? ($item->service->title??'') : ($item->project->title) }}</h4>
+                    <div class="line-clamp-6">{{ $item->project == null ? ($item->service->caption??'') : ($item->project->caption??'') }}</div>
+                  </div>
                 </div>
-              </div>
-            </div><!-- End Portfolio Item -->
+              </div><!-- End Portfolio Item -->
+              
+            @empty
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                  <div class="portfolio-wrap">
+                    <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
+                    <div class="portfolio-info">
+                      <h4>App 1</h4>
+                      <div class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates dicta consequuntur, optio eos quaerat, asperiores, vel pariatur reprehenderit perferendis repellat placeat. Aut corrupti esse, fugiat necessitatibus quis eos a?</div>
+                    </div>
+                  </div>
+                </div><!-- End Portfolio Item -->
+              
+            @endforelse
 
             
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">

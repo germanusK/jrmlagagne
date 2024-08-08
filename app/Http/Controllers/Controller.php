@@ -24,8 +24,8 @@ class Controller extends BaseController
         $data['services'] = Service::inRandomOrder()->get();
         $data['recent_works'] = Project::orderBy('id', 'DESC')->take(12)->get();
         $data['projects'] = Project::inRandomOrder()->take(12)->get();
-        $project_images = ProjectImage::orderBy('id', 'desc')->take(18)->get();
-        $service_images = ServiceImage::orderBy('id', 'desc')->take(18)->get();
+        $project_images = ProjectImage::inRandomOrder()->take(18)->get();
+        $service_images = ServiceImage::inRandomOrder()->take(18)->get();
         $data['gallery'] = $project_images->merge($service_images)->shuffle();
         return view('showcase.index', $data);
     }

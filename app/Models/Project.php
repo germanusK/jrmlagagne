@@ -28,22 +28,15 @@ class Project extends Model
         return $this->hasMany(ProjectImage::class, 'project_id');
     }
 
-    public function centers()
-    {
-        # code...
-        return $this->belongsToMany(Center::class, ProjectCenter::class);
-    }
-
     public function clients()
     {
         # code...
         return $this->belongsToMany(Client::class, Cases::class);
     }
 
-    public function specialties()
-    {
-        # code...
-        return $this->hasMany(Specialty::class, 'project_id');
+
+    function service() {
+        return $this->belongsTo(Service::class, 'service_id');
     }
 
 
