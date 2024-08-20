@@ -21,6 +21,7 @@ Route::get('/projects/details/{project_slug}', [Controller::class, 'project_deta
 Route::get('/projects/{service_slug?}', [Controller::class, 'projects'])->name('public.projects');
 Route::get('/about', [Controller::class, 'about'])->name('public.about');
 Route::get('/contact', [Controller::class, 'contact'])->name('public.contact');
+Route::post('/contact', [Controller::class, 'contact_post']);
 Route::get('/login', [Controller::class, 'login'])->name('public.login');
 Route::post('/login', [Controller::class, 'authenticate']);
 Route::get('/logout', [Controller::class, 'logout'])->name('public.logout');

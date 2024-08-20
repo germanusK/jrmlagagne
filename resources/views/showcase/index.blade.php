@@ -17,7 +17,7 @@
           <p style="font-size:2rem !important;">{{ $showcase_variables->business_slogan ?? "La solidité de notre construction, votre tranquillité d'esprit" }}</p>
           <div class="d-flex justify-content-center py-5">
             <a href="#services" class="btn-get-started">Commencer</a>
-            <a href="{{ $showcase_variables->hero_video_link ?? 'https://www.youtube.com/watch?v=LXb3EKWsInQ' }}" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Regarder la Vidéo</span></a>
+            <a href="{{ $showcase_variables->hero_video_link ?? 'https://youtu.be/dEDWg7U0RFU?si=wHKY10nAdY_WFgzM' }}" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Regarder la Vidéo</span></a>
           </div>
         </div>
       </div>
@@ -83,9 +83,7 @@
             <div class="col-lg-4 col-md-6">
               <div class="service-item position-relative card border-0 bg-service shadow-sm">
                   @if($service->featured_image == null)
-                    <div class="icon text mx-auto">
-                      <i class="bi bi-bricks"></i>
-                    </div>
+                    <img class="img img-fluid" style="height: 12rem;" src="{{ asset('assets/img/cta-bg-craft.jpg') }}">  
                   @else
                     <img class="img img-fluid" style="height: 12rem;" src="{{ $service->featured_image }}">  
                   @endif
@@ -120,12 +118,12 @@
                 </div>
 
                 <h2 class="h6">
-                  <a href="{{ route('admin.projects.index', $item->id) }}"><b>{{$item->title}}</b><i class="text-info">{{$item->service->title??''}}</i></a>
+                  <a href="{{ route('admin.projects.index', $item->id) }}"><b>{{$item->title}}</b> &hookrightarrow; <i class="text-info">{{$item->service->title??''}}</i></a>
                   <br><small class="text-secondary">{{ $item->start_date->format('M dS Y') }}</small>
                 </h2>
 
-                <div class="card">
-                  <div class="card-body ">
+                <div class="card border-0 mx-0 shadow-sm">
+                  <div class="card-body py-2">
                     <p class="line-clamp-4">{{ $item->caption??'' }}</p>
                   </div>
                 </div>
@@ -438,140 +436,18 @@
               </div><!-- End Portfolio Item -->
               
             @empty
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                  <div class="portfolio-wrap">
-                    <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
-                    <div class="portfolio-info">
-                      <h4>App 1</h4>
-                      <div class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates dicta consequuntur, optio eos quaerat, asperiores, vel pariatur reprehenderit perferendis repellat placeat. Aut corrupti esse, fugiat necessitatibus quis eos a?</div>
+                @for ($i = 0; $i < 12; $i++)
+                  <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <div class="portfolio-wrap">
+                      <a href="{{asset('assets/img/about.jpg')}}" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{asset('assets/img/about.jpg')}}" class="img-fluid" alt=""></a>
+                      <div class="portfolio-info">
+                        <h4>service/Project Label</h4>
+                        <div class="line-clamp-6">Project/Service caption</div>
+                      </div>
                     </div>
-                  </div>
-                </div><!-- End Portfolio Item -->
-              
+                  </div><!-- End Portfolio Item -->  
+                @endfor
             @endforelse
-
-            
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4>App 1</h4>
-                  <div class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates dicta consequuntur, optio eos quaerat, asperiores, vel pariatur reprehenderit perferendis repellat placeat. Aut corrupti esse, fugiat necessitatibus quis eos a?</div>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4>App 1</h4>
-                  <div class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates dicta consequuntur, optio eos quaerat, asperiores, vel pariatur reprehenderit perferendis repellat placeat. Aut corrupti esse, fugiat necessitatibus quis eos a?</div>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4>App 1</h4>
-                  <div class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates dicta consequuntur, optio eos quaerat, asperiores, vel pariatur reprehenderit perferendis repellat placeat. Aut corrupti esse, fugiat necessitatibus quis eos a?</div>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4>App 1</h4>
-                  <div class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates dicta consequuntur, optio eos quaerat, asperiores, vel pariatur reprehenderit perferendis repellat placeat. Aut corrupti esse, fugiat necessitatibus quis eos a?</div>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4>App 1</h4>
-                  <div class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates dicta consequuntur, optio eos quaerat, asperiores, vel pariatur reprehenderit perferendis repellat placeat. Aut corrupti esse, fugiat necessitatibus quis eos a?</div>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4>App 1</h4>
-                  <div class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates dicta consequuntur, optio eos quaerat, asperiores, vel pariatur reprehenderit perferendis repellat placeat. Aut corrupti esse, fugiat necessitatibus quis eos a?</div>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4>App 1</h4>
-                  <div class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates dicta consequuntur, optio eos quaerat, asperiores, vel pariatur reprehenderit perferendis repellat placeat. Aut corrupti esse, fugiat necessitatibus quis eos a?</div>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4>App 1</h4>
-                  <div class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates dicta consequuntur, optio eos quaerat, asperiores, vel pariatur reprehenderit perferendis repellat placeat. Aut corrupti esse, fugiat necessitatibus quis eos a?</div>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4>App 1</h4>
-                  <div class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates dicta consequuntur, optio eos quaerat, asperiores, vel pariatur reprehenderit perferendis repellat placeat. Aut corrupti esse, fugiat necessitatibus quis eos a?</div>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4>App 1</h4>
-                  <div class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates dicta consequuntur, optio eos quaerat, asperiores, vel pariatur reprehenderit perferendis repellat placeat. Aut corrupti esse, fugiat necessitatibus quis eos a?</div>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <a href="{{ asset('assets') }}/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ asset('assets') }}/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
-                <div class="portfolio-info">
-                  <h4>App 1</h4>
-                  <div class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates dicta consequuntur, optio eos quaerat, asperiores, vel pariatur reprehenderit perferendis repellat placeat. Aut corrupti esse, fugiat necessitatibus quis eos a?</div>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            
           </div><!-- End Portfolio Container -->
 
         </div>

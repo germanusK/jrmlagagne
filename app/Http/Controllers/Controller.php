@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactMail;
 use App\Models\Project;
 use App\Models\ProjectImage;
 use App\Models\Service;
@@ -12,7 +13,9 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 
 class Controller extends BaseController
 {
@@ -36,6 +39,12 @@ class Controller extends BaseController
         return view('showcase.contact');
     }
 
+    public function contact_post(Request $request){
+        $request->validate(['name'=>'required', 'email'=>'required|email', 'subject'=>'required', 'message'=>'required']);
+        $mail = new ContactMail($request->name, $request->email, $request->subject, $request->message);
+        Mail::send($mail);
+    }
+
     public function about()
     {
         # code...
@@ -48,6 +57,8 @@ class Controller extends BaseController
         $data['projects'] = $service_slug == null ?
             Project::orderBy('id', 'DESC')->paginate(36) :
             Project::where(['service_id'=>$service_slug])->orderBy('id', 'DESC')->paginate(36) ;
+            
+        // dd($data['projects']->items());
         return view('showcase.projects', $data);
     }
 
@@ -55,6 +66,8 @@ class Controller extends BaseController
     {
         # code...
         $data['project'] = Project::find($project_slug);
+        $data['related_projects'] = Project::where('service_id', $data['project']->service_id)->take(12)->get();
+        $data['services'] = Service::join('projects', 'projects.service_id', '=', 'services.id')->select(['services.*'])->distinct()->get();
         return view('showcase.project_details', $data);
     }
 

@@ -41,23 +41,23 @@
 
           <div class="row gy-4 posts-list">
 
-            @for($i = 0; $i < 12; $i++)
+            @foreach($projects->items() as $project)
               <div class="col-xl-4 col-md-6">
                 <article>
 
                   <div class="post-img">
-                    <img src="{{ asset('assets/img') }}/blog/blog-1.jpg" alt="" class="img-fluid">
+                    <img src="{{ $project->featured_image != null ? $project->featured_image : asset('assets/img/bg2.jpg') }}" alt="" class="img-fluid">
                   </div>
 
-                  <p class="post-category">project name &RightAngleBracket; &RightAngleBracket; service name </p>
+                  <h3 class="title">
+                    <a href="{{ route('public.project', ['project_slug'=>$project->id]) }}">{{$project->title}} &RightAngleBracket; &RightAngleBracket; {{$project->service->title}} </a>
+                  </h3>
 
-                  <h2 class="title">
-                    <a href="{{ route('public.project', ['project_slug'=>'aribiti']) }}">Poject caption here</a>
-                  </h2>
+                  <p class="post-category">{{$project->service->caption}} </p>
 
                 </article>
               </div><!-- End post list item -->
-            @endfor
+            @endforeach
 
           </div><!-- End blog posts list -->
 

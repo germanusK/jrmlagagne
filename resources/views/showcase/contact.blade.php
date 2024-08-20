@@ -69,7 +69,7 @@
                   <i class="bi bi-phone flex-shrink-0"></i>
                   <div>
                     <h4>Call:</h4>
-                    <p>+237 695209244/694393145/658550208</p>
+                    <p>+237 695209244/ 694393145/ 658550208</p>
                   </div>
                 </div><!-- End Info Item -->
 
@@ -85,7 +85,8 @@
             </div>
 
             <div class="col-lg-8">
-              <form method="post" role="form" class="php-email-form">
+              <form method="post" role="form" class="php-email-form" action="{{Request::url()}}">
+                @csrf
                 <div class="row">
                   <div class="col-md-6 form-group">
                     <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -114,7 +115,7 @@
         </div>
       </section><!-- End Contact Section -->
 
-
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31876.58297124832!2d9.893273936229004!3d2.9383261104221967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1062fd787fba5b3b%3A0x15523ec96fcf7000!2sKribi!5e0!3m2!1sen!2scm!4v1714895509670!5m2!1sen!2scm" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d996.1295446222761!2d9.925518269433216!3d2.9536083391377232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2scm!4v1723990345318!5m2!1sen!2scm" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </main><!-- End #main -->
 @endsection

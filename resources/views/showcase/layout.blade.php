@@ -14,11 +14,12 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    {{-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> --}}
 
     <!-- Vendor CSS Files -->
     <link href="{{ asset('assets') }}/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ asset('assets') }}/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> --}}
+    <link href="{{ asset('assets/css/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets') }}/vendor/aos/aos.css" rel="stylesheet">
     <link href="{{ asset('assets') }}/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="{{ asset('assets') }}/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
@@ -43,9 +44,9 @@
             <i class="bi bi-phone d-flex align-items-center ms-4"><a href="tel:+237 653 640 001">+237 653 640 001</a></i>
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
-            <a href="{{ $showcase_variables->twittter_link ?? '' }}" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="{{ $showcase_variables->facebook_link ?? '' }}" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="{{ $showcase_variables->instagram_link ?? '' }}" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="{{ $showcase_variables->youtube_link ?? 'https://www.youtube.com/channel/UCkOJE02uys61rw4fU5dg0rQ' }}" class="youtube"><i class="bi bi-youtube"></i></a>
+            <a href="{{ $showcase_variables->facebook_link ?? 'https://www.facebook.com/profile.php?id=61558073214757' }}" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="{{ $showcase_variables->instagram_link ?? 'https://www.instagram.com/jrmlagagne/' }}" class="instagram"><i class="bi bi-instagram"></i></a>
         </div>
         </div>
     </section><!-- End Top Bar -->
@@ -63,20 +64,18 @@
                     <li><a href="{{ route('public.home') }}">accueil</a></li>
                     <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                         <ul>
-                            <li><a href="{{ route('public.home') }}#services">All Services</a></li>
-                            <li><a href="{{ route('public.service', ['slug'=>'slug']) }}">Service 1</a></li>
-                            <li><a href="{{ route('public.service', ['slug'=>'slug']) }}">Service 2</a></li>
-                            <li><a href="{{ route('public.service', ['slug'=>'slug']) }}">Service 3</a></li>
-                            <li><a href="{{ route('public.service', ['slug'=>'slug']) }}">Service 4</a></li>
+                            <li><a href="{{ route('public.home') }}#services">Tous les services</a></li>
+                            @foreach ($services as $service)
+                                <li><a href="{{ route('public.service', ['slug'=>$service->id]) }}">{{$service->title}}</a></li>
+                            @endforeach
                         </ul>
                     </li>
-                    <li class="dropdown"><a href="#"><span>projects</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <li class="dropdown"><a href="#"><span>projets</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                         <ul>
-                        <li><a href="{{ route('public.projects') }}">All Projects</a></li>
-                        <li><a href="{{ route('public.projects', ['service_slug'=>'service']) }}">Service 1</a></li>
-                        <li><a href="{{ route('public.projects', ['service_slug'=>'service']) }}">Service 2</a></li>
-                        <li><a href="{{ route('public.projects', ['service_slug'=>'service']) }}">Service 3</a></li>
-                        <li><a href="{{ route('public.projects', ['service_slug'=>'service']) }}">Service 4</a></li>
+                        <li><a href="{{ route('public.projects') }}">Tous les projets</a></li>
+                        @foreach ($project_services as $service)
+                            <li><a href="{{ route('public.projects', ['service_slug'=>$service->id]) }}">{{$service->title}} Projets</a></li>
+                        @endforeach
                         </ul>
                     </li>
                     <li><a href="{{ route('public.about') }}">à propos</a></li>
@@ -106,9 +105,10 @@
                 </a>
                 <p>Entreprise constituée de Jeunes diplômés qualifiés chacun dans son domaine de compétence. Ses activités principales sont dans le Génie Maritime, le Génie Civil, l’Ingénierie, l’Architecture, la Construction Mécanique, la Construction Métallique, la Menuiserie métallique, aluminium et Inox. Ses réalisations respecte le rapport qualité prix dans le respect des normes et des délais de livraison</p>
                 <div class="social-links d-flex mt-4">
-                    <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="linkedin"><i class="bi bi-youtube"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61558073214757" class="facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/jrmlagagne/" class="instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UCkOJE02uys61rw4fU5dg0rQ" class="youtube"><i class="bi bi-youtube"></i></a>
+                    <a href="https://cm.linkedin.com/in/bezeng-mameh-8b7871308" class="linkedin"><i class="bi bi-linkedin"></i></a>
                 </div>
             </div>
 
@@ -126,12 +126,9 @@
             <div class="col-lg-2 col-6 footer-links">
                 <h4>Services</h4>
                 <ul>
-                    <li><a href="#">Génie maritime</a></li>
-                    <li><a href="#">Genie civil</a></li>
-                    <li><a href="#">Architecture</a></li>
-                    <li><a href="#">Ingénierie</a></li>
-                    <li><a href="#">Immobilier </a></li>
-                    <li><a href="#">Recyclage de la matière plastique</a></li>
+                    @foreach ($services as $service)
+                        <li><a href="{{route('public.service', $service->id)}}">{{$service->title}}</a></li>
+                    @endforeach
                 </ul>
             </div>
 

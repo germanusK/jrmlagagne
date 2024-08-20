@@ -91,13 +91,18 @@ class ServiceController extends Controller
         $instance->fill($request->all());
 
         if(($file = $request->file('featured_image')) != null){
-            if(filr_exists($instance->featured_image)){
+            if(file_exists($instance->featured_image)){
                 unlink($instance->featured_image);
             }
             $fxt = $file->getClientOriginalExtension();
             $fname = '__'.time().rand().'.'.$fxt;
             $fpath = asset('uploads/services/images');
-            $file->move($fpath, $fname);
+            if(!file_exists($fname)){
+                mkdir($fpath);
+            }
+
+            $file->move(public_path('uploads/services/images'), $fname);
+            
             $instance->featured_image = $fpath.'/'.$fname;
         }
         $instance->save();
