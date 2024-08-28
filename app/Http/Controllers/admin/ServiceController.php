@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 class ServiceController extends Controller
@@ -58,7 +59,8 @@ class ServiceController extends Controller
                 $fxt = $image->getClientOriginalExtension();
                 $fname = time().rand().'.'.$fxt;
                 $dir = asset('uploads/services/images/service'.$id);
-                $image->move($dir, $fname);
+                Storage::disk('public_uploads')->put('services/images/service'.$id.'/'.$fname, $image);
+                // $image->move($dir, $fname);
                 $records[] = ['service_id'=>$id, 'image_path'=>$dir.'/'.$fname, 'subject'=>$service->name??''];
             }
             \App\Models\ProjectImage::insert($records);
@@ -101,9 +103,10 @@ class ServiceController extends Controller
                 mkdir($fpath);
             }
 
-            $file->move(public_path('uploads/services/images'), $fname);
+            Storage::disk('public_uploads')->put("services/images/".$fname, $file);
             
             $instance->featured_image = $fpath.'/'.$fname;
+            $instance->icon = '';
         }
         $instance->save();
         return back()->with('success', "Operation Complete");
